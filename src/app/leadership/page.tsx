@@ -19,8 +19,8 @@ export default function LeadershipPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/team-wool-inspection.jpg"
-          alt="Tal Barahi founding partners at a New Zealand farm"
+          src="/images/partners.jpg"
+          alt="Tal Barahi founding partners"
           fill
           priority
           className="object-cover object-center"
