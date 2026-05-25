@@ -6,6 +6,19 @@ import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { woolCategories } from '@/lib/content';
 
+const categoryImages: Record<number, string> = {
+  1: '/images/raw-scoured-wool.webp',
+  2: '/images/sheep-eating-hay.jpg',
+  3: '/images/dyeing-lab.webp',
+  4: '/images/carding-machine.webp',
+  5: '/images/sheep-shearing.jpg',
+  6: '/images/wool-carpet.jpg',
+  7: '/images/felt-wool-balls.jpg',
+  8: '/images/wool-samples-basket.jpg',
+  9: '/images/knitting-yarn.jpg',
+  10: '/images/wool-bales.webp',
+};
+
 export default function WoolCategoriesPage() {
   return (
     <>
@@ -93,18 +106,20 @@ export default function WoolCategoriesPage() {
                     className="relative h-48 flex items-end p-6"
                     style={{ background: wool.color }}
                   >
-                    {/* Woven texture overlay */}
+                    {/* Real photo */}
+                    <Image
+                      src={categoryImages[wool.id]}
+                      alt={wool.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    {/* Dark gradient — bottom-heavy for label readability */}
                     <div
                       className="absolute inset-0"
-                      style={{
-                        backgroundImage: `
-                          repeating-linear-gradient(0deg, ${wool.accent}18 0px, ${wool.accent}18 2px, transparent 2px, transparent 18px),
-                          repeating-linear-gradient(90deg, ${wool.accent}12 0px, ${wool.accent}12 2px, transparent 2px, transparent 18px)
-                        `,
-                      }}
+                      style={{ background: 'linear-gradient(to top, rgba(43,43,41,0.72) 0%, rgba(43,43,41,0.18) 55%, transparent 100%)' }}
                     />
-                    {/* Grain */}
-                    <div className="grain-overlay opacity-50" />
+                    <div className="grain-overlay opacity-30" />
 
                     <div className="relative z-10 flex items-center justify-between w-full">
                       <div>
@@ -116,8 +131,8 @@ export default function WoolCategoriesPage() {
                         </span>
                       </div>
                       <div
-                        className="text-right font-sans text-xs"
-                        style={{ color: wool.accent, opacity: 0.7 }}
+                        className="text-right font-sans text-xs font-semibold"
+                        style={{ color: 'rgba(253,249,247,0.75)' }}
                       >
                         {wool.micron}
                       </div>
