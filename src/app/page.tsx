@@ -14,7 +14,7 @@ const trustItems = [
   { value: 'Trusted', label: 'Industry Supplier' },
   { value: '100%', label: 'New Zealand Wool' },
   { value: 'SGS & IWTO', label: 'Tested Quality' },
-  { value: 'Since 1990s', label: 'Serving Nepal' },
+  { value: 'Since 1994', label: 'Serving Nepal' },
 ];
 
 const woolPreview = [
@@ -134,7 +134,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            Est. 1990s &nbsp;·&nbsp; Kathmandu, Nepal &nbsp;·&nbsp; New Zealand Wool
+            Est. 1994 &nbsp;·&nbsp; Kathmandu, Nepal &nbsp;·&nbsp; New Zealand Wool
           </motion.p>
 
           <motion.h1
@@ -272,10 +272,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════════
           3. ABOUT PREVIEW — Editorial Asymmetric
       ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-brand-cream relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-brand-cream relative overflow-hidden">
         <div className="grain-overlay opacity-40" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-center">
 
             {/* Left editorial panel */}
             <AnimateIn direction="left" className="lg:col-span-5">
@@ -322,7 +322,7 @@ export default function HomePage() {
                     userSelect: 'none',
                   }}
                 >
-                  1990s
+                  1990
                 </div>
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
@@ -349,7 +349,7 @@ export default function HomePage() {
                         lineHeight: 1.35,
                       }}
                     >
-                      &ldquo;We did not build a company. We built relationships. The company followed.&rdquo;
+                      &ldquo;Built on trust, consistency, and relationships that have lasted for generations.&rdquo;
                     </blockquote>
                     <p
                       className="font-sans text-xs mt-5"
@@ -365,7 +365,7 @@ export default function HomePage() {
             {/* Right text panel */}
             <div className="lg:col-span-7 flex flex-col justify-center py-10 lg:py-0 lg:pl-8">
               <AnimateIn>
-                <span className="section-eyebrow">Est. 1990s · Our Heritage</span>
+                <span className="section-eyebrow">Est. 1994 · Our Heritage</span>
               </AnimateIn>
               <AnimateIn delay={0.1}>
                 <h2
@@ -387,7 +387,7 @@ export default function HomePage() {
               </AnimateIn>
               <AnimateIn delay={0.2}>
                 <p className="text-brand-muted mb-5" style={{ lineHeight: '1.85', maxWidth: '520px' }}>
-                  In the early 1990s, four partners came together in Kathmandu with a humble vision rooted in Nepal&apos;s textile tradition. What began in wool dyeing and Pashmina work grew — through trust, consistency, and genuine industry knowledge — into the country&apos;s most relied-upon wool supply partnership.
+                  Founded in 1994, four partners came together in Kathmandu with a humble vision rooted in Nepal&apos;s textile tradition. What began in wool dyeing and Pashmina work grew — through trust, consistency, and genuine industry knowledge — into the country&apos;s most relied-upon wool supply partnership.
                 </p>
               </AnimateIn>
               <AnimateIn delay={0.25}>
@@ -411,7 +411,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════════
           4. WOOL CATEGORIES PREVIEW
       ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 wool-texture-bg relative overflow-hidden">
+      <section className="py-16 md:py-24 wool-texture-bg relative overflow-hidden">
         <div className="grain-overlay opacity-40" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
 

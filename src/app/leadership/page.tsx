@@ -19,14 +19,14 @@ export default function LeadershipPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/partners.jpg"
+          src="/images/Partner.jpg"
           alt="Tal Barahi founding partners"
           fill
           priority
           className="object-cover object-top"
           sizes="100vw"
         />
-        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.60)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.82)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"
@@ -41,7 +41,7 @@ export default function LeadershipPage() {
               className="display-heading mt-3 mb-6"
               style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: '#FDF9F7', lineHeight: 1.0 }}
             >
-              Four Partners. Three Decades. One Mission.
+              Three Decades. One Mission.
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2}>
@@ -131,8 +131,14 @@ export default function LeadershipPage() {
                     {/* Title tag */}
                     <div className="absolute bottom-5 left-6">
                       <span
-                        className="text-xs font-semibold tracking-widest uppercase"
-                        style={{ color: 'rgba(139,44,44,0.9)', fontSize: '0.6rem', letterSpacing: '0.12em' }}
+                        className="text-xs font-semibold tracking-widest uppercase px-2.5 py-1 rounded-sm"
+                        style={{
+                          color: '#FDF9F7',
+                          fontSize: '0.6rem',
+                          letterSpacing: '0.12em',
+                          background: 'rgba(139,44,44,0.85)',
+                          backdropFilter: 'blur(4px)',
+                        }}
                       >
                         {director.title}
                       </span>
@@ -152,12 +158,12 @@ export default function LeadershipPage() {
                       {director.bio}
                     </p>
                     <div className="mt-6 pt-5 border-t border-brand-border">
-                      <span
-                        className="text-xs font-semibold tracking-widest uppercase text-brand-muted"
-                        style={{ fontSize: '0.6rem', letterSpacing: '0.12em' }}
+                      <p
+                        className="italic font-semibold"
+                        style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', lineHeight: '1.55', color: '#8B2C2C' }}
                       >
-                        Est. 1990s · Kathmandu, Nepal
-                      </span>
+                        &ldquo;{director.tagline}&rdquo;
+                      </p>
                     </div>
                   </div>
                 </div>

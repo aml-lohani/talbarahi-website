@@ -94,7 +94,7 @@ export default function ContactPage() {
                       {[
                         {
                           label: 'Location',
-                          value: 'Kathmandu, Nepal',
+                          value: 'Mulpani, Kathmandu, Nepal',
                           sub: 'Our home and operations base for over 30 years',
                           icon: (
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -116,7 +116,7 @@ export default function ContactPage() {
                         },
                         {
                           label: 'Established',
-                          value: 'Early 1990s',
+                          value: '1990',
                           sub: 'Over three decades of industry service',
                           icon: (
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -127,7 +127,7 @@ export default function ContactPage() {
                         },
                         {
                           label: 'Email',
-                          value: 'info@talbarahi.com',
+                          value: 'info@talbarahihandicraft.com.np',
                           sub: 'Enquiries and sourcing requests',
                           icon: (
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -364,46 +364,40 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map placeholder */}
+      {/* Map */}
       <section className="bg-brand-cream pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimateIn>
             <div
-              className="rounded-sm relative overflow-hidden flex items-center justify-center"
-              style={{
-                height: '300px',
-                background: '#E8E0D8',
-                border: '1px solid #E0D5D0',
-              }}
+              className="rounded-sm overflow-hidden relative"
+              style={{ height: '400px', border: '1px solid #E0D5D0', boxShadow: '0 4px 24px rgba(139,44,44,0.06)' }}
             >
-              <div className="grain-overlay opacity-40" />
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `
-                    repeating-linear-gradient(0deg, rgba(43,43,41,0.06) 0px, rgba(43,43,41,0.06) 1px, transparent 1px, transparent 30px),
-                    repeating-linear-gradient(90deg, rgba(43,43,41,0.06) 0px, rgba(43,43,41,0.06) 1px, transparent 1px, transparent 30px)
-                  `,
-                }}
+              <iframe
+                src="https://maps.google.com/maps?q=Tal+Barahi+Handicraft,+Mulpani,+Kathmandu,+Nepal&output=embed&z=15"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Tal Barahi Handicraft location — Mulpani, Kathmandu, Nepal"
               />
-              <div className="relative z-10 text-center">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3"
-                  style={{ background: '#8B2C2C' }}
+            </div>
+            <div className="flex items-center gap-2 mt-3">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0">
+                <path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4Z" stroke="#8B2C2C" strokeWidth="1.2"/>
+                <circle cx="7" cy="5" r="1.5" stroke="#8B2C2C" strokeWidth="1.2"/>
+              </svg>
+              <p className="text-brand-muted text-xs">Mulpani, Kathmandu, Nepal &nbsp;·&nbsp;
+                <a
+                  href="https://share.google/SgtVMh6VldcKzw9VQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-crimson hover:underline"
                 >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 1C5.79 1 4 2.79 4 5c0 3.75 4 9 4 9s4-5.25 4-9c0-2.21-1.79-4-4-4Z" fill="#FDF9F7"/>
-                    <circle cx="8" cy="5" r="1.5" fill="#8B2C2C"/>
-                  </svg>
-                </div>
-                <p
-                  className="serif-heading text-xl italic font-semibold text-brand-charcoal"
-                  style={{ fontFamily: '"Cormorant Garamond", serif' }}
-                >
-                  Kathmandu, Nepal
-                </p>
-                <p className="text-brand-muted text-sm mt-1">Our home for over three decades</p>
-              </div>
+                  Open in Google Maps
+                </a>
+              </p>
             </div>
           </AnimateIn>
         </div>

@@ -48,8 +48,10 @@ export default function Footer() {
               Premium New Zealand wool, supplied with trust and consistency to Nepal&apos;s carpet, felt, and textile industries for over three decades.
             </p>
             <div className="space-y-2 text-sm text-brand-border">
-              <p>Kathmandu, Nepal</p>
-              <p>info@talbarahi.com</p>
+              <p>Mulpani, Kathmandu, Nepal</p>
+              <p>info@talbarahihandicraft.com.np</p>
+              <p>+977 9851063891</p>
+              <p>+977 9851060473</p>
             </div>
           </div>
 

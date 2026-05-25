@@ -2,10 +2,10 @@ export const siteConfig = {
   name: 'Tal Barahi Handicraft',
   tagline: 'Premium New Zealand Wool. Powering Nepal\'s Craft Heritage.',
   description: 'For over three decades, Tal Barahi Handicraft has been the trusted backbone of Nepal\'s carpet, felt, and textile industries — supplying premium New Zealand wool from Kathmandu with consistency, quality, and care.',
-  address: 'Kathmandu, Nepal',
-  phone: '+977-1-XXXXXXX',
-  email: 'info@talbarahi.com',
-  established: '1990s',
+  address: 'Mulpani, Kathmandu, Nepal',
+  phone: '+977 9851063891, +977 9851060473',
+  email: 'info@talbarahihandicraft.com.np',
+  established: '1994',
 };
 
 export const woolCategories = [
@@ -163,7 +163,7 @@ export const industries = [
     icon: '◉',
     description: 'Individual wool artisans — felters, weavers, dyers, and fiber artists — are among the craftspeople we have served across Nepal. We respect the artisan tradition as the heart of our industry.',
     detail: 'We provide natural, undyed, and hand-dyed wool for artisans who value authenticity of material as much as technique.',
-    stat: 'Est. 1990s',
+    stat: 'Est. 1994',
     statLabel: 'Supporting artisans since',
   },
   {
@@ -221,27 +221,33 @@ export const directors = [
     id: 1,
     name: 'Bishnu Mani Lohani',
     title: 'Founder and Director',
-    bio: 'A founding visionary of Tal Barahi Handicraft, bringing decades of expertise in the Nepalese textile industry. His leadership in establishing relationships with New Zealand suppliers helped define the company\'s foundation in premium wool sourcing.',
+    photo: '/images/Bishnu Mani Lohani.png',
+    tagline: 'Building trusted relationships since 1994.',
+    bio: 'A founding visionary of Tal Barahi Handicraft, bringing decades of expertise in the Nepalese textile industry and establishing the company\'s foundation in premium wool sourcing.',
   },
   {
     id: 2,
     name: 'Khet Raj Pathak',
     title: 'Founder and Director',
-    photo: '/images/Khet Raj Pathak.jpg',
-    bio: 'With roots in Nepal\'s wool dyeing tradition, he guided the company\'s early years through hands-on knowledge of fiber processing, quality grading, and industry relationships across the Kathmandu valley.',
+    photo: '/images/Khet Raj Pathak.png',
+    tagline: 'Three Decades in Wool Logistics & Quality.',
+    bio: 'A specialist in import logistics and wool grading, he has spent three decades building the supply chain infrastructure that ensures consistent, reliable delivery of New Zealand wool to Nepalese industries.',
   },
   {
     id: 3,
     name: 'Ram Hari Panta',
     title: 'Founder and Director',
+    photo: '/images/Ram Hari Panta.png',
+    tagline: 'Strengthening Nepal\'s Supply Network.',
     bio: 'His deep understanding of Nepal\'s handicraft export ecosystem has been central to positioning Tal Barahi as a trusted supplier for the country\'s most demanding carpet and textile manufacturers.',
   },
   {
     id: 4,
     name: 'Som Raj Pandey',
     title: 'Founder and Director',
-    photo: '/images/Som Raj Pandey.jpg',
-    bio: 'A specialist in import logistics and wool grading, he has spent three decades building the supply chain infrastructure that ensures consistent, reliable delivery of New Zealand wool to Nepalese industries.',
+    photo: '/images/Som Raj Pandey.png',
+    tagline: 'Preserving generations of wool processing knowledge and craftsmanship.',
+    bio: 'With roots in Nepal\'s wool dyeing tradition, he guided the company\'s early years through hands-on knowledge of fiber processing, quality grading, and industry relationships across the Kathmandu valley.',
   },
 ];
 

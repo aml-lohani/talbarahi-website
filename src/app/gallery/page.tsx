@@ -14,7 +14,7 @@ const galleryData = [
   { id: 3,  label: 'Hand-Knotted Carpet',                  category: 'Craft',       height: 280, bg: '#8B2C2C', image: '/images/wool-carpet-dark.jpg' },
   { id: 4,  label: 'Kathmandu Bale Storage',               category: 'Operations',  height: 220, bg: '#3D3D3A', image: '/images/wool-in-bales.webp' },
   { id: 5,  label: 'Sheep Station, New Zealand',           category: 'Sourcing',    height: 360, bg: '#6B7D5E', image: '/images/sheep-barn-nz.jpg' },
-  { id: 6,  label: 'Carding Operations, Kathmandu',         category: 'Operations',  height: 240, bg: '#3A3A2A', image: '/images/wool-in-bales.webp' },
+  { id: 6,  label: 'Founding Partners, Kathmandu',          category: 'Operations',  height: 240, bg: '#3A3020', image: '/images/Partner.jpg' },
   { id: 7,  label: 'Felt Craft, Kathmandu',                category: 'Craft',       height: 260, bg: '#6A3A2A', image: '/images/sheep-shearing.jpg' },
   { id: 8,  label: 'SGS Testing Facility, New Zealand',    category: 'Operations',  height: 200, bg: '#2B3A4A', image: '/images/sgs-testing-facility.jpg' },
   { id: 9,  label: 'NZ Farm Landscape',                    category: 'Sourcing',    height: 300, bg: '#7A9060', image: '/images/nz-farm-landscape.jpg' },
