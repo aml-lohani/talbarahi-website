@@ -219,26 +219,28 @@ export const certifications = [
 export const directors = [
   {
     id: 1,
-    name: 'Director One',
-    title: 'Co-Founder & Managing Director',
+    name: 'Bishnu Mani Lohani',
+    title: 'Founder and Director',
     bio: 'A founding visionary of Tal Barahi Handicraft, bringing decades of expertise in the Nepalese textile industry. His leadership in establishing relationships with New Zealand suppliers helped define the company\'s foundation in premium wool sourcing.',
   },
   {
     id: 2,
-    name: 'Director Two',
-    title: 'Co-Founder & Director of Operations',
+    name: 'Khet Raj Pathak',
+    title: 'Founder and Director',
+    photo: '/images/Khet Raj Pathak.jpg',
     bio: 'With roots in Nepal\'s wool dyeing tradition, he guided the company\'s early years through hands-on knowledge of fiber processing, quality grading, and industry relationships across the Kathmandu valley.',
   },
   {
     id: 3,
-    name: 'Director Three',
-    title: 'Co-Founder & Director of Trade',
+    name: 'Ram Hari Panta',
+    title: 'Founder and Director',
     bio: 'His deep understanding of Nepal\'s handicraft export ecosystem has been central to positioning Tal Barahi as a trusted supplier for the country\'s most demanding carpet and textile manufacturers.',
   },
   {
     id: 4,
-    name: 'Director Four',
-    title: 'Co-Founder & Director of Supply Chain',
+    name: 'Som Raj Pandey',
+    title: 'Founder and Director',
+    photo: '/images/Som Raj Pandey.jpg',
     bio: 'A specialist in import logistics and wool grading, he has spent three decades building the supply chain infrastructure that ensures consistent, reliable delivery of New Zealand wool to Nepalese industries.',
   },
 ];

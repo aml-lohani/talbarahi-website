@@ -71,47 +71,62 @@ export default function LeadershipPage() {
                       background: i % 4 === 0 ? '#3D3530' : i % 4 === 1 ? '#4A3828' : i % 4 === 2 ? '#302B28' : '#3A3530',
                     }}
                   >
-                    <div className="grain-overlay opacity-60" />
-                    {/* Decorative woven pattern */}
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        backgroundImage: `
-                          repeating-linear-gradient(0deg, rgba(224,213,208,0.05) 0px, rgba(224,213,208,0.05) 1px, transparent 1px, transparent 20px),
-                          repeating-linear-gradient(90deg, rgba(224,213,208,0.04) 0px, rgba(224,213,208,0.04) 1px, transparent 1px, transparent 20px)
-                        `,
-                      }}
-                    />
+                    {/* Real photo */}
+                    {'photo' in director && director.photo && (
+                      <Image
+                        src={director.photo as string}
+                        alt={director.name}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )}
+
+                    <div className={`grain-overlay ${'photo' in director && director.photo ? 'opacity-20' : 'opacity-60'}`} />
+                    {/* Decorative woven pattern — only for placeholder */}
+                    {!('photo' in director && director.photo) && (
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          backgroundImage: `
+                            repeating-linear-gradient(0deg, rgba(224,213,208,0.05) 0px, rgba(224,213,208,0.05) 1px, transparent 1px, transparent 20px),
+                            repeating-linear-gradient(90deg, rgba(224,213,208,0.04) 0px, rgba(224,213,208,0.04) 1px, transparent 1px, transparent 20px)
+                          `,
+                        }}
+                      />
+                    )}
                     {/* Director number / decorative element */}
                     <div className="absolute top-6 right-6">
                       <div
                         className="w-12 h-12 rounded-sm flex items-center justify-center"
-                        style={{ border: '1px solid rgba(224,213,208,0.15)', background: 'rgba(253,249,247,0.04)' }}
+                        style={{ border: '1px solid rgba(224,213,208,0.15)', background: 'rgba(253,249,247,0.04)', backdropFilter: 'blur(4px)' }}
                       >
                         <span
                           className="display-heading"
-                          style={{ fontSize: '1.4rem', color: 'rgba(224,213,208,0.3)', lineHeight: 1 }}
+                          style={{ fontSize: '1.4rem', color: 'rgba(224,213,208,0.5)', lineHeight: 1 }}
                         >
                           {String(director.id).padStart(2, '0')}
                         </span>
                       </div>
                     </div>
 
-                    {/* Silhouette placeholder */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <svg
-                        viewBox="0 0 120 160"
-                        className="w-28 h-36"
-                        style={{ opacity: 0.1 }}
-                        fill="rgba(224,213,208,1)"
-                      >
-                        <circle cx="60" cy="45" r="28" />
-                        <path d="M10 160 Q10 100 60 95 Q110 100 110 160 Z" />
-                      </svg>
-                    </div>
+                    {/* Silhouette placeholder — only when no photo */}
+                    {!('photo' in director && director.photo) && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <svg
+                          viewBox="0 0 120 160"
+                          className="w-28 h-36"
+                          style={{ opacity: 0.1 }}
+                          fill="rgba(224,213,208,1)"
+                        >
+                          <circle cx="60" cy="45" r="28" />
+                          <path d="M10 160 Q10 100 60 95 Q110 100 110 160 Z" />
+                        </svg>
+                      </div>
+                    )}
 
                     {/* Bottom gradient */}
-                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
 
                     {/* Title tag */}
                     <div className="absolute bottom-5 left-6">
