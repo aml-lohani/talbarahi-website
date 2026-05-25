@@ -61,7 +61,7 @@ export default function GalleryPage() {
               className="display-heading mt-3 mb-6"
               style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: '#FDF9F7', lineHeight: 1.0 }}
             >
-              From Green Highlands to Nepalese Craft Floors
+              From Wool Source to Craftsmanship
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2}>
