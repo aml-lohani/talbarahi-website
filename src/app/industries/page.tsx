@@ -20,6 +20,15 @@ export default function IndustriesPage() {
         className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: '#2B2B29' }}
       >
+        <Image
+          src="/images/nepali-architecture.jpg"
+          alt="Traditional Nepali carved wood architecture"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.80)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { woolCategories } from '@/lib/content';
@@ -10,6 +11,15 @@ export default function WoolCategoriesPage() {
     <>
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
+        <Image
+          src="/images/raw-scoured-wool.webp"
+          alt="Raw scoured New Zealand wool"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.80)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"

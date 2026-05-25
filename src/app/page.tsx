@@ -18,12 +18,12 @@ const trustItems = [
 ];
 
 const woolPreview = [
-  { name: 'Raw White Wool', desc: 'Unprocessed natural purity', color: '#F0EAE0', accent: '#C4A882', category: 'Natural' },
-  { name: 'Colored Wool', desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#8B2C2C', category: 'Processed' },
-  { name: 'Carpet Wool', desc: 'Heavy-grade pile resilience', color: '#D8C9B0', accent: '#7A6848', category: 'Industrial' },
-  { name: 'Felting Wool', desc: 'Optimal natural felting scales', color: '#DDD0C0', accent: '#9B7E6B', category: 'Industrial' },
-  { name: 'Carded Wool', desc: 'Uniform fiber alignment', color: '#E0D8CC', accent: '#A8956E', category: 'Processed' },
-  { name: 'Natural Wool', desc: 'Lanolin-rich, batch consistent', color: '#E8DDD0', accent: '#B8A48A', category: 'Natural' },
+  { name: 'Raw White Wool', desc: 'Unprocessed natural purity', color: '#F0EAE0', accent: '#C4A882', category: 'Natural', image: '/images/raw-scoured-wool.webp' },
+  { name: 'Colored Wool', desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#8B2C2C', category: 'Processed', image: '/images/dyeing-lab.webp' },
+  { name: 'Carpet Wool', desc: 'Heavy-grade pile resilience', color: '#D8C9B0', accent: '#7A6848', category: 'Industrial', image: '/images/wool-carpet.jpg' },
+  { name: 'Felting Wool', desc: 'Optimal natural felting scales', color: '#DDD0C0', accent: '#9B7E6B', category: 'Industrial', image: '/images/felt-wool-balls.jpg' },
+  { name: 'Carded Wool', desc: 'Uniform fiber alignment', color: '#E0D8CC', accent: '#A8956E', category: 'Processed', image: '/images/carding-machine.webp' },
+  { name: 'Natural Wool', desc: 'Lanolin-rich, batch consistent', color: '#E8DDD0', accent: '#B8A48A', category: 'Natural', image: '/images/wool-samples-basket.jpg' },
 ];
 
 const testimonials = [
@@ -433,7 +433,7 @@ export default function HomePage() {
                     marginTop: '0.35rem',
                   }}
                 >
-                  Premium Material Categories
+                  Our Wool Categories
                 </h2>
               </AnimateIn>
             </div>
@@ -459,17 +459,17 @@ export default function HomePage() {
                     className="relative overflow-hidden"
                     style={{ height: '160px', background: wool.color }}
                   >
-                    {/* Woven texture */}
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        backgroundImage: `
-                          repeating-linear-gradient(45deg, ${wool.accent}20 0px, ${wool.accent}20 1.5px, transparent 1.5px, transparent 13px),
-                          repeating-linear-gradient(-45deg, ${wool.accent}14 0px, ${wool.accent}14 1.5px, transparent 1.5px, transparent 13px)
-                        `,
-                      }}
+                    {/* Real photo */}
+                    <Image
+                      src={wool.image}
+                      alt={wool.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 33vw"
                     />
-                    <div className="grain-overlay opacity-60" />
+                    {/* Subtle dark tint for label readability */}
+                    <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.22)' }} />
+                    <div className="grain-overlay opacity-35" />
                     {/* Category tag */}
                     <div className="absolute top-3 left-3 z-10">
                       <span

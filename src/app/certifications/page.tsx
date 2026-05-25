@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { certifications } from '@/lib/content';
@@ -37,6 +38,15 @@ export default function CertificationsPage() {
     <>
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
+        <Image
+          src="/images/dyeing-factory.webp"
+          alt="Wool dyeing and processing facility"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.82)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"

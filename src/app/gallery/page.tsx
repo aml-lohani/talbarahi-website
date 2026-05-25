@@ -11,19 +11,19 @@ const categories = ['All', 'Sourcing', 'Materials', 'Craft', 'Operations'];
 const galleryData = [
   { id: 1, label: 'New Zealand Highland Farm', category: 'Sourcing', height: 320, bg: '#4A6741', emoji: '🏔️', image: '/images/sheep-barn-pens.jpg' },
   { id: 2, label: 'Raw Wool Fiber Close-up', category: 'Materials', height: 220, bg: '#C9B49A', emoji: '🧶', image: '/images/wool-samples-basket.jpg' },
-  { id: 3, label: 'Carpet Artisan at Work', category: 'Craft', height: 280, bg: '#8B2C2C', emoji: '🏺' },
-  { id: 4, label: 'Warehouse Operations', category: 'Operations', height: 220, bg: '#3D3D3A', emoji: '📦' },
+  { id: 3, label: 'Carpet Artisan at Work', category: 'Craft', height: 280, bg: '#8B2C2C', emoji: '🏺', image: '/images/wool-carpet.jpg' },
+  { id: 4, label: 'Warehouse Operations', category: 'Operations', height: 220, bg: '#3D3D3A', emoji: '📦', image: '/images/wool-bales.webp' },
   { id: 5, label: 'NZ Sheep Flock at Dawn', category: 'Sourcing', height: 360, bg: '#6B7D5E', emoji: '🐑', image: '/images/sheep-eating-hay.jpg' },
-  { id: 6, label: 'Colored Wool Range Display', category: 'Materials', height: 240, bg: '#B8A48A', emoji: '🎨' },
+  { id: 6, label: 'Colored Wool Range Display', category: 'Materials', height: 240, bg: '#B8A48A', emoji: '🎨', image: '/images/dyeing-lab.webp' },
   { id: 7, label: 'Kathmandu Heritage Architecture', category: 'Craft', height: 260, bg: '#5A4A3A', emoji: '⚒️', image: '/images/nepali-architecture.jpg' },
-  { id: 8, label: 'Felting Needle Work', category: 'Craft', height: 200, bg: '#A83535', emoji: '🪡' },
+  { id: 8, label: 'Felting Needle Work', category: 'Craft', height: 200, bg: '#A83535', emoji: '🪡', image: '/images/felt-wool-balls.jpg' },
   { id: 9, label: 'Kathmandu at Dawn', category: 'Sourcing', height: 300, bg: '#7A9060', emoji: '🌿', image: '/images/nepal-mountains-prayer-flags.jpg' },
-  { id: 10, label: 'Dyeing Process', category: 'Materials', height: 280, bg: '#6B1F1F', emoji: '🫙' },
+  { id: 10, label: 'Dyeing Process', category: 'Materials', height: 280, bg: '#6B1F1F', emoji: '🫙', image: '/images/dyeing-factory.webp' },
   { id: 11, label: 'Traditional Knitting', category: 'Craft', height: 240, bg: '#4A3828', emoji: '🧤' },
   { id: 12, label: 'Export Packing', category: 'Operations', height: 220, bg: '#2B2B29', emoji: '🗃️' },
-  { id: 13, label: 'Wool Grading Station', category: 'Operations', height: 260, bg: '#5A4A3A', emoji: '⚖️' },
+  { id: 13, label: 'Wool Grading Station', category: 'Operations', height: 260, bg: '#5A4A3A', emoji: '⚖️', image: '/images/carding-machine.webp' },
   { id: 14, label: 'Carpet Loom Detail', category: 'Craft', height: 300, bg: '#7A4A2A', emoji: '🖼️' },
-  { id: 15, label: 'Carded Wool Preparation', category: 'Materials', height: 220, bg: '#D0C0A8', emoji: '☁️' },
+  { id: 15, label: 'Carded Wool Preparation', category: 'Materials', height: 220, bg: '#D0C0A8', emoji: '☁️', image: '/images/raw-scoured-wool.webp' },
   { id: 16, label: 'Farm Shearing Season', category: 'Sourcing', height: 280, bg: '#507040', emoji: '✂️', image: '/images/sheep-shearing.jpg' },
 ];
 
@@ -38,6 +38,15 @@ export default function GalleryPage() {
     <>
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
+        <Image
+          src="/images/wool-bales.webp"
+          alt="Wool bales in warehouse"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.80)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"
