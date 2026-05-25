@@ -170,15 +170,6 @@ export default function GalleryPage() {
                     </span>
                   </div>
 
-                  {/* Decorative center element — only for CSS placeholder items */}
-                  {!item.image && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span style={{ fontSize: '3.5rem', opacity: 0.15, filter: 'blur(1px)' }}>
-                        {item.emoji}
-                      </span>
-                    </div>
-                  )}
-
                   {/* Caption on hover */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     <p
