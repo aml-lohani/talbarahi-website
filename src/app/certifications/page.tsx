@@ -39,11 +39,11 @@ export default function CertificationsPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/dyeing-factory.webp"
-          alt="Wool dyeing and processing facility"
+          src="/images/sgs-testing-facility.jpg"
+          alt="SGS testing facility"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
           sizes="100vw"
         />
         <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.82)' }} />
