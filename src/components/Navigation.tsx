@@ -6,7 +6,9 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const navLinks = [
+type NavItem = { href: string; label: string };
+
+const navLinks: NavItem[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/wool-categories', label: 'Wool' },
@@ -33,11 +35,7 @@ export default function Navigation() {
   }, [pathname]);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
@@ -57,6 +55,7 @@ export default function Navigation() {
         style={{ borderBottom: '1px solid' }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
@@ -68,12 +67,24 @@ export default function Navigation() {
             />
             <div className="flex flex-col leading-none">
               <span
-                className="font-serif-heading text-lg font-semibold text-brand-charcoal leading-tight"
-                style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}
+                className="font-serif-heading text-lg font-semibold leading-tight"
+                style={{
+                  fontFamily: '"Cormorant Garamond", serif',
+                  letterSpacing: '-0.01em',
+                  color: transparent ? '#FDF9F7' : '#2B2B29',
+                  transition: 'color 0.35s',
+                }}
               >
                 Tal Barahi
               </span>
-              <span className="text-xs text-brand-muted font-sans tracking-widest uppercase" style={{ fontSize: '0.6rem' }}>
+              <span
+                className="font-sans tracking-widest uppercase"
+                style={{
+                  fontSize: '0.6rem',
+                  color: transparent ? 'rgba(253,249,247,0.6)' : '#666666',
+                  transition: 'color 0.35s',
+                }}
+              >
                 Handicraft
               </span>
             </div>
@@ -95,10 +106,7 @@ export default function Navigation() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Link
-              href="/contact"
-              className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5"
-            >
+            <Link href="/contact" className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5">
               Get in Touch
             </Link>
             <button
@@ -143,11 +151,11 @@ export default function Navigation() {
                     key={link.href}
                     initial={{ opacity: 0, x: 24 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.06, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ delay: i * 0.055, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                   >
                     <Link
                       href={link.href}
-                      className={`block py-4 border-b border-brand-border font-serif-heading text-2xl font-semibold italic ${
+                      className={`block py-4 border-b border-brand-border text-2xl font-semibold italic ${
                         pathname === link.href ? 'text-brand-crimson' : 'text-brand-charcoal'
                       }`}
                       style={{ fontFamily: '"Cormorant Garamond", serif' }}
@@ -157,10 +165,11 @@ export default function Navigation() {
                   </motion.div>
                 ))}
               </nav>
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.45 }}
                 className="mt-8"
               >
                 <Link href="/contact" className="btn-primary w-full justify-center">
