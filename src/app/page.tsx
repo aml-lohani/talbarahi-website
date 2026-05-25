@@ -757,25 +757,39 @@ export default function HomePage() {
                     {t.quote}
                   </blockquote>
                   {/* Attribution */}
-                  <div className="pt-6 border-t border-brand-border">
-                    <p
-                      className="font-sans font-semibold text-brand-charcoal"
-                      style={{ fontSize: '0.82rem' }}
+                  <div className="pt-6 border-t border-brand-border flex items-center gap-4">
+                    {/* Initials avatar */}
+                    <div
+                      className="flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center"
+                      style={{ background: 'rgba(139,44,44,0.10)', border: '1px solid rgba(139,44,44,0.18)' }}
                     >
-                      {t.name}
-                    </p>
-                    <p
-                      className="font-sans text-brand-muted mt-0.5"
-                      style={{ fontSize: '0.72rem' }}
-                    >
-                      {t.title}
-                    </p>
-                    <p
-                      className="font-sans mt-0.5"
-                      style={{ fontSize: '0.68rem', color: '#8B2C2C', letterSpacing: '0.04em' }}
-                    >
-                      {t.company}
-                    </p>
+                      <span
+                        className="font-semibold"
+                        style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1rem', color: '#8B2C2C', fontStyle: 'italic' }}
+                      >
+                        {t.name.split(' ').map((n: string) => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div>
+                      <p
+                        className="font-sans font-semibold text-brand-charcoal"
+                        style={{ fontSize: '0.82rem' }}
+                      >
+                        {t.name}
+                      </p>
+                      <p
+                        className="font-sans text-brand-muted mt-0.5"
+                        style={{ fontSize: '0.72rem' }}
+                      >
+                        {t.title}
+                      </p>
+                      <p
+                        className="font-sans mt-0.5"
+                        style={{ fontSize: '0.68rem', color: '#8B2C2C', letterSpacing: '0.04em' }}
+                      >
+                        {t.company}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </StaggerItem>
