@@ -2,28 +2,29 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import AnimateIn from '@/components/AnimateIn';
 import { galleryItems } from '@/lib/content';
 
 const categories = ['All', 'Sourcing', 'Materials', 'Craft', 'Operations'];
 
 const galleryData = [
-  { id: 1, label: 'New Zealand Highland Farm', category: 'Sourcing', height: 320, bg: '#4A6741', emoji: '🏔️' },
-  { id: 2, label: 'Raw Wool Fiber Close-up', category: 'Materials', height: 220, bg: '#C9B49A', emoji: '🧶' },
+  { id: 1, label: 'New Zealand Highland Farm', category: 'Sourcing', height: 320, bg: '#4A6741', emoji: '🏔️', image: '/images/sheep-barn-pens.jpg' },
+  { id: 2, label: 'Raw Wool Fiber Close-up', category: 'Materials', height: 220, bg: '#C9B49A', emoji: '🧶', image: '/images/wool-samples-basket.jpg' },
   { id: 3, label: 'Carpet Artisan at Work', category: 'Craft', height: 280, bg: '#8B2C2C', emoji: '🏺' },
   { id: 4, label: 'Warehouse Operations', category: 'Operations', height: 220, bg: '#3D3D3A', emoji: '📦' },
-  { id: 5, label: 'NZ Sheep Flock at Dawn', category: 'Sourcing', height: 360, bg: '#6B7D5E', emoji: '🐑' },
+  { id: 5, label: 'NZ Sheep Flock at Dawn', category: 'Sourcing', height: 360, bg: '#6B7D5E', emoji: '🐑', image: '/images/sheep-eating-hay.jpg' },
   { id: 6, label: 'Colored Wool Range Display', category: 'Materials', height: 240, bg: '#B8A48A', emoji: '🎨' },
-  { id: 7, label: 'Kathmandu Textile Workshop', category: 'Craft', height: 260, bg: '#5A4A3A', emoji: '⚒️' },
+  { id: 7, label: 'Kathmandu Heritage Architecture', category: 'Craft', height: 260, bg: '#5A4A3A', emoji: '⚒️', image: '/images/nepali-architecture.jpg' },
   { id: 8, label: 'Felting Needle Work', category: 'Craft', height: 200, bg: '#A83535', emoji: '🪡' },
-  { id: 9, label: 'Highland Pastoral Scene', category: 'Sourcing', height: 300, bg: '#7A9060', emoji: '🌿' },
+  { id: 9, label: 'Kathmandu at Dawn', category: 'Sourcing', height: 300, bg: '#7A9060', emoji: '🌿', image: '/images/nepal-mountains-prayer-flags.jpg' },
   { id: 10, label: 'Dyeing Process', category: 'Materials', height: 280, bg: '#6B1F1F', emoji: '🫙' },
   { id: 11, label: 'Traditional Knitting', category: 'Craft', height: 240, bg: '#4A3828', emoji: '🧤' },
   { id: 12, label: 'Export Packing', category: 'Operations', height: 220, bg: '#2B2B29', emoji: '🗃️' },
   { id: 13, label: 'Wool Grading Station', category: 'Operations', height: 260, bg: '#5A4A3A', emoji: '⚖️' },
   { id: 14, label: 'Carpet Loom Detail', category: 'Craft', height: 300, bg: '#7A4A2A', emoji: '🖼️' },
   { id: 15, label: 'Carded Wool Preparation', category: 'Materials', height: 220, bg: '#D0C0A8', emoji: '☁️' },
-  { id: 16, label: 'Farm Shearing Season', category: 'Sourcing', height: 280, bg: '#507040', emoji: '✂️' },
+  { id: 16, label: 'Farm Shearing Season', category: 'Sourcing', height: 280, bg: '#507040', emoji: '✂️', image: '/images/sheep-shearing.jpg' },
 ];
 
 export default function GalleryPage() {
@@ -108,6 +109,17 @@ export default function GalleryPage() {
                   transition={{ delay: i * 0.05, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
                   whileHover={{ scale: 1.02 }}
                 >
+                  {/* Real photo if available */}
+                  {item.image && (
+                    <Image
+                      src={item.image}
+                      alt={item.label}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                    />
+                  )}
+
                   {/* Texture overlay */}
                   <div
                     className="absolute inset-0"
@@ -121,9 +133,14 @@ export default function GalleryPage() {
                       )`,
                     }}
                   />
-                  <div className="grain-overlay opacity-60" />
+                  <div className={`grain-overlay ${item.image ? 'opacity-25' : 'opacity-60'}`} />
 
-                  {/* Gradient overlay */}
+                  {/* Base gradient for photos */}
+                  {item.image && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent" />
+                  )}
+
+                  {/* Gradient overlay on hover */}
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
@@ -144,12 +161,14 @@ export default function GalleryPage() {
                     </span>
                   </div>
 
-                  {/* Decorative center element */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span style={{ fontSize: '3.5rem', opacity: 0.15, filter: 'blur(1px)' }}>
-                      {item.emoji}
-                    </span>
-                  </div>
+                  {/* Decorative center element — only for CSS placeholder items */}
+                  {!item.image && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span style={{ fontSize: '3.5rem', opacity: 0.15, filter: 'blur(1px)' }}>
+                        {item.emoji}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Caption on hover */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">

@@ -1,9 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { industries } from '@/lib/content';
+
+const industryImages: Record<number, string> = {
+  1: '/images/wool-carpet.jpg',
+  2: '/images/felt-wool-balls.jpg',
+  3: '/images/wool-samples-basket.jpg',
+};
 
 export default function IndustriesPage() {
   return (
@@ -95,22 +102,43 @@ export default function IndustriesPage() {
                         background: i % 3 === 0 ? '#4A6741' : i % 3 === 1 ? '#8B2C2C' : '#3D3D3A',
                       }}
                     >
-                      <div className="grain-overlay opacity-60" />
-                      <div
-                        className="absolute inset-0"
-                        style={{
-                          backgroundImage: `
-                            repeating-linear-gradient(30deg, rgba(253,249,247,0.04) 0px, rgba(253,249,247,0.04) 1px, transparent 1px, transparent 20px),
-                            repeating-linear-gradient(-30deg, rgba(253,249,247,0.03) 0px, rgba(253,249,247,0.03) 1px, transparent 1px, transparent 20px)
-                          `,
-                        }}
-                      />
-                      {/* Large decorative icon */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span style={{ fontSize: '6rem', opacity: 0.12, filter: 'blur(2px)' }}>
-                          {industry.icon}
-                        </span>
-                      </div>
+                      {/* Real photo if available */}
+                      {industryImages[industry.id] && (
+                        <Image
+                          src={industryImages[industry.id]}
+                          alt={industry.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      )}
+                      {/* Dark gradient overlay for readability */}
+                      {industryImages[industry.id] && (
+                        <div
+                          className="absolute inset-0"
+                          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 55%, transparent 100%)' }}
+                        />
+                      )}
+                      <div className={`grain-overlay ${industryImages[industry.id] ? 'opacity-20' : 'opacity-60'}`} />
+                      {!industryImages[industry.id] && (
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            backgroundImage: `
+                              repeating-linear-gradient(30deg, rgba(253,249,247,0.04) 0px, rgba(253,249,247,0.04) 1px, transparent 1px, transparent 20px),
+                              repeating-linear-gradient(-30deg, rgba(253,249,247,0.03) 0px, rgba(253,249,247,0.03) 1px, transparent 1px, transparent 20px)
+                            `,
+                          }}
+                        />
+                      )}
+                      {/* Large decorative icon — only for CSS placeholder blocks */}
+                      {!industryImages[industry.id] && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span style={{ fontSize: '6rem', opacity: 0.12, filter: 'blur(2px)' }}>
+                            {industry.icon}
+                          </span>
+                        </div>
+                      )}
                       <div className="absolute bottom-8 left-8">
                         <div
                           className="display-heading"

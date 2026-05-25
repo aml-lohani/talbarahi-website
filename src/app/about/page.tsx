@@ -151,6 +151,46 @@ export default function AboutPage() {
                   </div>
                 </div>
               </AnimateIn>
+
+              {/* Kathmandu photo panel */}
+              <AnimateIn direction="left" delay={0.3}>
+                <div
+                  className="rounded-sm relative overflow-hidden"
+                  style={{ height: '260px' }}
+                >
+                  <Image
+                    src="/images/boudhanath-stupa.jpg"
+                    alt="Boudhanath Stupa, Kathmandu — our home for over three decades"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: 'linear-gradient(to top, rgba(43,43,41,0.82) 0%, rgba(43,43,41,0.2) 55%, transparent 100%)' }}
+                  />
+                  <div className="grain-overlay opacity-30" />
+                  <div className="absolute bottom-5 left-6">
+                    <p
+                      className="font-sans font-semibold tracking-widest uppercase mb-1"
+                      style={{ color: 'rgba(253,249,247,0.5)', fontSize: '0.6rem', letterSpacing: '0.18em' }}
+                    >
+                      Kathmandu, Nepal
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: '"Cormorant Garamond", serif',
+                        fontSize: '1.05rem',
+                        fontStyle: 'italic',
+                        color: '#FDF9F7',
+                        lineHeight: 1.35,
+                      }}
+                    >
+                      Our home for over three decades.
+                    </p>
+                  </div>
+                </div>
+              </AnimateIn>
             </div>
           </div>
         </div>

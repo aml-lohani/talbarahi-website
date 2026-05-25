@@ -32,6 +32,9 @@ Thumbs.db
 # Temporary screenshots (development only)
 temporary screenshots/
 
+# Sample images (source assets, not for version control)
+sample images/
+
 # Misc
 *.pem
 .vercel

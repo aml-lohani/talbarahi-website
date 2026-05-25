@@ -286,29 +286,38 @@ export default function HomePage() {
                   background: '#2B2B29',
                 }}
               >
-                {/* Woven texture */}
-                <div className="grain-overlay opacity-50" />
+                {/* Real team photo — Tal Barahi partners at NZ farm */}
+                <Image
+                  src="/images/team-wool-inspection.jpg"
+                  alt="Tal Barahi partners at a New Zealand farm inspecting raw wool"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                {/* Primary dark overlay for legibility */}
                 <div
                   className="absolute inset-0"
-                  style={{
-                    backgroundImage: `
-                      repeating-linear-gradient(0deg, rgba(224,213,208,0.055) 0px, rgba(224,213,208,0.055) 1px, transparent 1px, transparent 22px),
-                      repeating-linear-gradient(90deg, rgba(224,213,208,0.04) 0px, rgba(224,213,208,0.04) 1px, transparent 1px, transparent 22px)
-                    `,
-                  }}
+                  style={{ background: 'rgba(43,43,41,0.70)' }}
+                />
+                {/* Bottom-up gradient for quote readability */}
+                <div
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(to top, rgba(43,43,41,0.88) 0%, rgba(43,43,41,0.3) 55%, transparent 100%)' }}
                 />
                 {/* Warm atmospheric glow */}
                 <div
                   className="absolute inset-0"
-                  style={{ background: 'radial-gradient(ellipse 80% 70% at 30% 60%, rgba(139,44,44,0.12) 0%, transparent 65%)' }}
+                  style={{ background: 'radial-gradient(ellipse 80% 70% at 30% 60%, rgba(139,44,44,0.18) 0%, transparent 65%)' }}
                 />
+                {/* Grain texture */}
+                <div className="grain-overlay opacity-35" />
                 {/* Large decorative year */}
                 <div
                   className="absolute -bottom-6 -right-4 select-none pointer-events-none"
                   style={{
                     fontFamily: '"Passions Conflict", cursive',
                     fontSize: '9rem',
-                    color: 'rgba(224,213,208,0.07)',
+                    color: 'rgba(224,213,208,0.14)',
                     lineHeight: 1,
                     userSelect: 'none',
                   }}

@@ -89,8 +89,8 @@ export default function CertificationsPage() {
                     {cert.icon}
                   </div>
                   <h3
-                    className="serif-heading text-xl italic font-semibold text-brand-cream mb-4"
-                    style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                    className="serif-heading text-xl italic font-semibold mb-4"
+                    style={{ fontFamily: '"Cormorant Garamond", serif', color: '#FDF9F7' }}
                   >
                     {cert.name}
                   </h3>
