@@ -23,10 +23,10 @@ export default function LeadershipPage() {
           alt="Tal Barahi founding partners"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
           sizes="100vw"
         />
-        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.82)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(43,43,41,0.60)' }} />
         <div className="grain-overlay opacity-30" />
         <div
           className="absolute inset-0"
