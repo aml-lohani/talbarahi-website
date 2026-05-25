@@ -7,16 +7,29 @@ import SectionHeader from '@/components/SectionHeader';
 import { woolCategories } from '@/lib/content';
 
 const categoryImages: Record<number, string> = {
-  1: '/images/raw-scoured-wool.webp',
-  2: '/images/sheep-eating-hay.jpg',
-  3: '/images/dyeing-lab.webp',
-  4: '/images/carding-machine.webp',
-  5: '/images/sheep-shearing.jpg',
-  6: '/images/wool-carpet.jpg',
-  7: '/images/felt-wool-balls.jpg',
-  8: '/images/wool-samples-basket.jpg',
-  9: '/images/knitting-yarn.jpg',
-  10: '/images/wool-bales.webp',
+  1: '/images/raw-scoured-wool-new.webp',    // Raw/Scoured Wool
+  2: '/images/natural-wool-raw.jpeg',        // Natural Wool
+  3: '/images/dyed-wool-rolls.jpg',          // Colored & Dyed Wool
+  4: '/images/carded-white-wool.jpeg',       // Carded Wool
+  5: '/images/sheep-shearing-detail.jpg',    // Uncarded Wool
+  6: '/images/carpet-wool-natural.webp',     // Carpet Wool
+  7: '/images/felting-wool-roving.jpg',      // Felting Wool
+  8: '/images/wool-samples-sunlit.jpg',      // Fine Micron Wool
+  9: '/images/wool-knitting.webp',           // Knitting Yarn Wool
+  10: '/images/wool-bales-warehouse.png',    // Industrial Bulk Supply
+};
+
+const categoryObjectPos: Record<number, string> = {
+  1: 'center 80%',
+  2: 'center 40%',
+  3: 'center center',
+  4: 'center center',
+  5: 'center center',
+  6: 'center center',
+  7: 'center center',
+  8: 'center center',
+  9: 'center center',
+  10: 'center center',
 };
 
 export default function WoolCategoriesPage() {
@@ -25,8 +38,8 @@ export default function WoolCategoriesPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/raw-scoured-wool.webp"
-          alt="Raw scoured New Zealand wool"
+          src="/images/sheep-farm-nz.png"
+          alt="New Zealand sheep farm — source of premium wool"
           fill
           priority
           className="object-cover object-center"
@@ -112,6 +125,7 @@ export default function WoolCategoriesPage() {
                       alt={wool.name}
                       fill
                       className="object-cover"
+                      style={{ objectPosition: categoryObjectPos[wool.id] ?? 'center center' }}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Dark gradient — bottom-heavy for label readability */}

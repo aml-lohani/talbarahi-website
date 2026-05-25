@@ -7,9 +7,13 @@ import SectionHeader from '@/components/SectionHeader';
 import { industries } from '@/lib/content';
 
 const industryImages: Record<number, string> = {
-  1: '/images/wool-carpet.jpg',
-  2: '/images/felt-wool-balls.jpg',
-  3: '/images/wool-samples-basket.jpg',
+  1: '/images/carpet-wool-natural.webp',
+  2: '/images/felt-balls-colorful.jpg',
+  3: '/images/wool-knitting.webp',
+  4: '/images/dyed-wool-rolls.jpg',
+  5: '/images/wool-samples-sunlit.jpg',
+  6: '/images/natural-wool-raw.jpeg',
+  7: '/images/wool-bales-warehouse.png',
 };
 
 export default function IndustriesPage() {

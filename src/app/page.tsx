@@ -18,12 +18,12 @@ const trustItems = [
 ];
 
 const woolPreview = [
-  { name: 'Raw White Wool', desc: 'Unprocessed natural purity', color: '#F0EAE0', accent: '#C4A882', category: 'Natural', image: '/images/raw-scoured-wool.webp' },
-  { name: 'Colored Wool', desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#8B2C2C', category: 'Processed', image: '/images/dyeing-lab.webp' },
-  { name: 'Carpet Wool', desc: 'Heavy-grade pile resilience', color: '#D8C9B0', accent: '#7A6848', category: 'Industrial', image: '/images/wool-carpet.jpg' },
-  { name: 'Felting Wool', desc: 'Optimal natural felting scales', color: '#DDD0C0', accent: '#9B7E6B', category: 'Industrial', image: '/images/felt-wool-balls.jpg' },
-  { name: 'Carded Wool', desc: 'Uniform fiber alignment', color: '#E0D8CC', accent: '#A8956E', category: 'Processed', image: '/images/carding-machine.webp' },
-  { name: 'Natural Wool', desc: 'Lanolin-rich, batch consistent', color: '#E8DDD0', accent: '#B8A48A', category: 'Natural', image: '/images/wool-samples-basket.jpg' },
+  { name: 'Scoured Wool',  desc: 'Washed, clean NZ wool at source', color: '#F0EAE0', accent: '#C4A882', category: 'Natural',    image: '/images/raw-scoured-wool-new.webp', objectPos: 'center 80%' },
+  { name: 'Dyed Wool',     desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#6B5040', category: 'Processed',  image: '/images/dyed-wool-rolls.jpg',         objectPos: 'center center' },
+  { name: 'Carpet Wool',   desc: 'Heavy-grade pile resilience',      color: '#D8C9B0', accent: '#7A6848', category: 'Industrial', image: '/images/carpet-wool-natural.webp',    objectPos: 'center center' },
+  { name: 'Felting Wool',  desc: 'Optimal natural felting scales',   color: '#DDD0C0', accent: '#B87050', category: 'Industrial', image: '/images/felting-wool-roving.jpg',     objectPos: 'center center' },
+  { name: 'Carded Wool',   desc: 'Uniform fiber alignment',          color: '#E0D8CC', accent: '#A8956E', category: 'Processed',  image: '/images/carded-white-wool.jpeg',      objectPos: 'center center' },
+  { name: 'Natural Wool',  desc: 'Lanolin-rich, batch consistent',   color: '#E8DDD0', accent: '#7A5A3A', category: 'Natural',    image: '/images/natural-wool-raw.jpeg',       objectPos: 'center 40%' },
 ];
 
 const testimonials = [
@@ -288,7 +288,7 @@ export default function HomePage() {
               >
                 {/* Real team photo — Tal Barahi partners at NZ farm */}
                 <Image
-                  src="/images/team-wool-inspection.jpg"
+                  src="/images/team-wool-inspection-nz.jpg"
                   alt="Tal Barahi partners at a New Zealand farm inspecting raw wool"
                   fill
                   className="object-cover object-center"
@@ -465,6 +465,7 @@ export default function HomePage() {
                       alt={wool.name}
                       fill
                       className="object-cover"
+                      style={{ objectPosition: wool.objectPos }}
                       sizes="(max-width: 768px) 50vw, 33vw"
                     />
                     {/* Subtle dark tint for label readability */}
