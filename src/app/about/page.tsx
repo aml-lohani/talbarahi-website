@@ -265,8 +265,8 @@ export default function AboutPage() {
                 >
                   <div className="w-8 h-px bg-brand-crimson mb-6" />
                   <h3
-                    className="serif-heading text-2xl italic font-semibold text-brand-cream mb-4"
-                    style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                    className="serif-heading text-2xl italic font-semibold mb-4"
+                    style={{ fontFamily: '"Cormorant Garamond", serif', color: '#FDF9F7' }}
                   >
                     {value.title}
                   </h3>

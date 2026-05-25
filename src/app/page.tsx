@@ -379,7 +379,7 @@ export default function HomePage() {
                     lineHeight: 1.15,
                   }}
                 >
-                  From Four Partners to Nepal&apos;s Most Trusted Wool Supplier.
+                  Nepal&apos;s Most Trusted Wool Supplier.
                 </h2>
               </AnimateIn>
               <AnimateIn delay={0.15}>
