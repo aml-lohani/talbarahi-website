@@ -89,12 +89,24 @@ export default function HomePage() {
           />
         </motion.div>
 
-        {/* Text readability gradient — rises from bottom */}
+        {/* Base dim — lifts overall image darkness evenly */}
+        <div className="absolute inset-0 z-[1]" style={{ background: 'rgba(10,16,6,0.32)' }} />
+
+        {/* Bottom-to-top gradient for text readability */}
         <div
           className="absolute inset-0 z-[1]"
           style={{
             background:
-              'linear-gradient(to top, rgba(12,20,8,0.88) 0%, rgba(12,20,8,0.55) 28%, rgba(12,20,8,0.18) 55%, rgba(12,20,8,0.04) 75%, transparent 100%)',
+              'linear-gradient(to top, rgba(10,16,6,0.92) 0%, rgba(10,16,6,0.62) 28%, rgba(10,16,6,0.22) 55%, rgba(10,16,6,0.06) 75%, transparent 100%)',
+          }}
+        />
+
+        {/* Top fade for nav legibility */}
+        <div
+          className="absolute inset-0 z-[1]"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(10,16,6,0.45) 0%, rgba(10,16,6,0.15) 18%, transparent 38%)',
           }}
         />
 
@@ -103,7 +115,7 @@ export default function HomePage() {
           className="absolute inset-0 z-[1]"
           style={{
             background:
-              'linear-gradient(to right, rgba(12,20,8,0.35) 0%, transparent 25%, transparent 75%, rgba(12,20,8,0.25) 100%)',
+              'linear-gradient(to right, rgba(10,16,6,0.35) 0%, transparent 25%, transparent 75%, rgba(10,16,6,0.25) 100%)',
           }}
         />
 
