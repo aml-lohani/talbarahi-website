@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #8B2C2C;
+  --accent-color: #2B2B29;
+  --light-bg: #FDF9F7;
+  --white: #FFFFFF;
+  --text-light: #666666;
+  --border-light: #E0D5D0;
+  --soft-gray: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FDF9F7;
+  color: #2B2B29;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Passions Conflict', cursive;
+}
+
+.font-serif-heading {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+::selection {
+  background: rgba(139, 44, 44, 0.15);
+  color: #2B2B29;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF9F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B2C2C;
+  border-radius: 3px;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.hero-landscape {
+  background:
+    radial-gradient(ellipse 90% 40% at 15% 100%, rgba(74, 103, 65, 0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 35% at 85% 100%, rgba(74, 103, 65, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 110% 25% at 50% 85%, rgba(180, 155, 100, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(195, 215, 230, 0.9) 0%, transparent 75%),
+    linear-gradient(180deg, #c5d8e8 0%, #d8cdb0 38%, #b8a882 65%, #8B7A5A 100%);
+}
+
+.wool-texture-bg {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(139, 44, 44, 0.04) 0px,
+      rgba(139, 44, 44, 0.04) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(43, 43, 41, 0.03) 0px,
+      rgba(43, 43, 41, 0.03) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    #FDF9F7;
+}
+
+.supply-chain-line {
+  position: relative;
+}
+.supply-chain-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E0D5D0 10%, #8B2C2C 50%, #E0D5D0 90%, transparent);
+  transform: translateY(-50%);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+.scroll-bounce {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.nav-link {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2B2B29;
+  transition: color 0.25s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #8B2C2C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8B2C2C;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #8B2C2C;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(139, 44, 44, 0.14), 0 4px 16px rgba(43, 43, 41, 0.06);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: #8B2C2C;
+  color: #FDF9F7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #8B2C2C;
+  border-radius: 2px;
+  transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #6B1F1F;
+  border-color: #6B1F1F;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(139, 44, 44, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #2B2B29;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #E0D5D0;
+  border-radius: 2px;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: #2B2B29;
+  color: #FDF9F7;
+  border-color: #2B2B29;
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #E0D5D0;
+}
+
+.divider-ornament::before,
+.divider-ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E0D5D0);
+}
+
+.divider-ornament::after {
+  background: linear-gradient(270deg, transparent, #E0D5D0);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8B2C2C;
+  margin-bottom: 1rem;
+}
+
+.display-heading {
+  font-family: 'Passions Conflict', cursive;
+  color: #2B2B29;
+  line-height: 1.1;
+}
+
+.serif-heading {
+  font-family: 'Cormorant Garamond', serif;
+  color: #2B2B29;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.masonry-grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #8B2C2C;
+  box-shadow: 0 0 0 3px rgba(139, 44, 44, 0.08);
+}
