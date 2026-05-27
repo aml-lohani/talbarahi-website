@@ -44,18 +44,17 @@ export default function Navigation() {
 
   return (
     <>
-      <motion.header
-        className="fixed top-0 left-0 right-0 z-50"
-        animate={{
-          backgroundColor: transparent ? 'rgba(253,249,247,0)' : 'rgba(253,249,247,0.97)',
-          borderBottomColor: transparent ? 'rgba(224,213,208,0)' : 'rgba(224,213,208,0.8)',
-          backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',
-          y: 0,
-        }}
-        transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-        style={{ borderBottom: '1px solid', willChange: 'transform' }}
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
+      <header className="fixed top-0 left-0 right-0 z-50">
+        {/* Background layer — CSS transition avoids mobile fixed-position glitches from framer-motion backdropFilter */}
+        <div
+          className="absolute inset-0 transition-[background-color,border-color,backdrop-filter] duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] border-b"
+          style={{
+            backgroundColor: transparent ? 'rgba(253,249,247,0)' : 'rgba(253,249,247,0.97)',
+            borderColor: transparent ? 'rgba(224,213,208,0)' : 'rgba(224,213,208,0.8)',
+            backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20 relative z-10">
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
@@ -135,7 +134,7 @@ export default function Navigation() {
             </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
