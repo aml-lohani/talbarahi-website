@@ -574,7 +574,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: certification badges */}
-            <AnimateStagger className="grid grid-cols-2 gap-3" style={{ gridAutoRows: '1fr' }} staggerDelay={0.07}>
+            <AnimateStagger className="grid grid-cols-1 sm:grid-cols-2 gap-3" style={{ gridAutoRows: '1fr' }} staggerDelay={0.07}>
               {certifications.map((cert) => (
                 <StaggerItem key={cert.id} className="h-full">
                   <div

@@ -40,7 +40,7 @@ export default function Navigation() {
   }, [mobileOpen]);
 
   const isHome = pathname === '/';
-  const transparent = isHome && !scrolled;
+  const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
     <>
