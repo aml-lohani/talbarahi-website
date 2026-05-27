@@ -144,7 +144,7 @@ export default function AboutPage() {
                 >
                   <div className="grid grid-cols-2 gap-6">
                     {[
-                      { value: '4', label: 'Founding Partners' },
+                      { value: '25k+', label: 'Tons Delivered' },
                       { value: 'NZ', label: 'Wool Origin' },
                       { value: '7+', label: 'Industries Served' },
                       { value: 'KTM', label: 'Based in Kathmandu' },

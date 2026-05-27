@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface AnimateInProps {
   children: ReactNode;
@@ -59,14 +59,17 @@ export function AnimateStagger({
   children,
   className = '',
   staggerDelay = 0.1,
+  style,
 }: {
   children: ReactNode;
   className?: string;
   staggerDelay?: number;
+  style?: React.CSSProperties;
 }) {
   return (
     <motion.div
       className={className}
+      style={style}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}

@@ -574,11 +574,11 @@ export default function HomePage() {
             </div>
 
             {/* Right: certification badges */}
-            <AnimateStagger className="grid grid-cols-2 gap-3" staggerDelay={0.07}>
+            <AnimateStagger className="grid grid-cols-2 gap-3" style={{ gridAutoRows: '1fr' }} staggerDelay={0.07}>
               {certifications.map((cert) => (
-                <StaggerItem key={cert.id}>
+                <StaggerItem key={cert.id} className="h-full">
                   <div
-                    className="flex items-start gap-4 p-5 rounded-sm card-hover"
+                    className="flex items-start gap-4 p-5 rounded-sm card-hover h-full"
                     style={{
                       border: '1px solid rgba(224,213,208,0.1)',
                       background: 'rgba(253,249,247,0.04)',
