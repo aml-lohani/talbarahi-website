@@ -7,12 +7,12 @@ import SectionHeader from '@/components/SectionHeader';
 import { industries } from '@/lib/content';
 
 const industryImages: Record<number, string> = {
-  1: '/images/products/carpet-wool-natural.webp',
-  2: '/images/products/felt-balls-colorful.jpg',
-  3: '/images/gallery/wool-knitting.webp',
-  4: '/images/products/dyed-wool-rolls.jpg',
-  5: '/images/products/wool-samples-sunlit.jpg',
-  6: '/images/products/natural-wool-raw.jpeg',
+  1: '/images/industries/carpets.jpg',
+  2: '/images/industries/felt-makers.jpg',
+  3: '/images/industries/knitting.jpg',
+  4: '/images/industries/textile.jpg',
+  5: '/images/industries/handicrafts.jpg',
+  6: '/images/industries/artisans.webp',
   7: '/images/gallery/wool-bales-warehouse.jpg',
 };
 
