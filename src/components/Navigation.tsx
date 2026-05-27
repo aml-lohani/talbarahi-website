@@ -50,9 +50,10 @@ export default function Navigation() {
           backgroundColor: transparent ? 'rgba(253,249,247,0)' : 'rgba(253,249,247,0.97)',
           borderBottomColor: transparent ? 'rgba(224,213,208,0)' : 'rgba(224,213,208,0.8)',
           backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',
+          y: 0,
         }}
         transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-        style={{ borderBottom: '1px solid' }}
+        style={{ borderBottom: '1px solid', willChange: 'transform' }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
 
@@ -64,7 +65,7 @@ export default function Navigation() {
               width={64}
               height={64}
               className={`w-12 h-12 md:w-16 md:h-16 transition-[filter,opacity] duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
-                transparent ? 'md:brightness-0 md:invert md:opacity-90' : ''
+                transparent ? 'brightness-0 invert opacity-90' : ''
               }`}
             />
             <div className="flex flex-col leading-none">
@@ -119,17 +120,17 @@ export default function Navigation() {
               <motion.span
                 animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.25 }}
-                className="block w-6 h-px bg-brand-charcoal"
+                className={`block w-6 h-px transition-colors duration-[350ms] ${transparent ? 'bg-brand-cream' : 'bg-brand-charcoal'}`}
               />
               <motion.span
                 animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="block w-6 h-px bg-brand-charcoal"
+                className={`block w-6 h-px transition-colors duration-[350ms] ${transparent ? 'bg-brand-cream' : 'bg-brand-charcoal'}`}
               />
               <motion.span
                 animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                 transition={{ duration: 0.25 }}
-                className="block w-6 h-px bg-brand-charcoal"
+                className={`block w-6 h-px transition-colors duration-[350ms] ${transparent ? 'bg-brand-cream' : 'bg-brand-charcoal'}`}
               />
             </button>
           </div>
