@@ -325,7 +325,7 @@ export default function HomePage() {
                     userSelect: 'none',
                   }}
                 >
-                  1990
+                  1994
                 </div>
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">

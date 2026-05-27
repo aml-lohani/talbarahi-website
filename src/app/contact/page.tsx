@@ -118,7 +118,7 @@ export default function ContactPage() {
                         },
                         {
                           label: 'Established',
-                          value: '1990',
+                          value: '1994',
                           sub: 'Over three decades of industry service',
                           icon: (
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
