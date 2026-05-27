@@ -38,7 +38,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/boudhanath-stupa.jpg"
+          src="/images/hero/boudhanath-stupa.jpg"
           alt="Boudhanath Stupa, Kathmandu"
           fill
           priority
@@ -67,7 +67,7 @@ export default function ContactPage() {
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-brand-border text-lg max-w-xl leading-relaxed" style={{ lineHeight: '1.8' }}>
-              Whether you&apos;re a manufacturer, exporter, or artisan — we&apos;d welcome the opportunity to understand your wool requirements and discuss how we can support your work.
+              Whether you&apos;re a manufacturer, exporter or artisan, we would welcome the opportunity to understand your wool requirements and discuss how we can support your work.
             </p>
           </AnimateIn>
         </div>

@@ -18,11 +18,11 @@ const values = [
   },
   {
     title: 'Expertise in Wool',
-    description: 'Three decades of wool trading has given us a deep, practical understanding of fiber — from micron grades to felting properties to dye uptake characteristics.',
+    description: 'Three decades of wool trading has given us a deep, practical understanding of fiber: from micron grades to felting properties to dye uptake characteristics.',
   },
   {
     title: 'Supporting Nepal\'s Craft Legacy',
-    description: 'We see ourselves as part of a larger story — the story of Nepalese craftsmanship. Our wool goes into carpets and textiles that carry Nepal\'s identity into homes around the world.',
+    description: 'We see ourselves as part of a larger story: the story of Nepalese craftsmanship. Our wool goes into carpets and textiles that carry Nepal\'s identity into homes around the world.',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
         style={{ background: '#2B2B29' }}
       >
         <Image
-          src="/images/team-wool-inspection.jpg"
+          src="/images/hero/team-wool-inspection.jpg"
           alt="Tal Barahi partners at a New Zealand farm"
           fill
           priority
@@ -90,9 +90,9 @@ export default function AboutPage() {
               <div className="space-y-5 text-brand-muted" style={{ lineHeight: '1.85' }}>
                 {[
                   'In the early 1990s, Kathmandu was a city of growing textile ambition. Nepal\'s carpet industry was flourishing, its handicraft sector was gaining international recognition, and the demand for quality raw materials was rising across the valley.',
-                  'Four partners — each bringing their own expertise, network, and entrepreneurial spirit — came together with a shared belief: that the quality of Nepal\'s craftsmanship depended on the quality of its materials.',
-                  'They started modestly, in the world of wool dyeing and Pashmina — industries that require deep knowledge of fiber, color, and process. Through this hands-on work, they built not just a business, but a genuine understanding of what Nepalese manufacturers needed.',
-                  'Over the years, relationships deepened. Word spread through the carpet industry, the felt sector, the knitting mills. Tal Barahi became known not as a supplier, but as a partner — one that understood your business and delivered consistently.',
+                  'Four partners, each bringing their own expertise, network and entrepreneurial spirit, came together with a shared belief: that the quality of Nepal\'s craftsmanship depended on the quality of its materials.',
+                  'They started modestly, in the world of wool dyeing and Pashmina, industries that require deep knowledge of fiber, color and process. Through this hands-on work, they built not just a business but a genuine understanding of what Nepalese manufacturers needed.',
+                  'Over the years, relationships deepened. Word spread through the carpet industry, the felt sector, the knitting mills. Tal Barahi became known not as a supplier but as a partner who understood your business and delivered consistently.',
                   'The defining moment came in the early 2000s, when the company began importing premium sheep wool directly from New Zealand. It was a decision that would shape the next two decades and place Tal Barahi at the heart of Nepal\'s wool supply ecosystem.',
                 ].map((para, i) => (
                   <AnimateIn key={i} delay={0.1 + i * 0.05}>
@@ -170,7 +170,7 @@ export default function AboutPage() {
                   style={{ height: '260px' }}
                 >
                   <Image
-                    src="/images/boudhanath-stupa.jpg"
+                    src="/images/hero/boudhanath-stupa.jpg"
                     alt="Boudhanath Stupa, Kathmandu — our home for over three decades"
                     fill
                     className="object-cover object-center"
@@ -214,7 +214,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Our Journey"
             heading="Three Decades in the Making"
-            subheading="The story of Tal Barahi is one of patient growth — built on relationships, deepened by expertise, and sustained by trust."
+            subheading="The story of Tal Barahi is one of patient growth, built on relationships, deepened by expertise and sustained by trust."
           />
 
           <div className="relative max-w-4xl mx-auto">

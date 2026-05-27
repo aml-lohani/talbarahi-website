@@ -21,7 +21,7 @@ export default function InsightsPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/nepal-mountains-prayer-flags.jpg"
+          src="/images/hero/nepal-mountains-prayer-flags.jpg"
           alt="Nepal mountains with prayer flags"
           fill
           priority
@@ -50,7 +50,7 @@ export default function InsightsPage() {
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-brand-border text-lg max-w-2xl leading-relaxed" style={{ lineHeight: '1.8' }}>
-              Drawing on three decades of experience in Nepal&apos;s wool supply ecosystem — knowledge about materials, industries, and the craft heritage we serve.
+              Drawing on three decades of experience in Nepal&apos;s wool supply ecosystem: knowledge about materials, industries and the craft heritage we serve.
             </p>
           </AnimateIn>
         </div>

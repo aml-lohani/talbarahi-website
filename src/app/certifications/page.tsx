@@ -21,15 +21,15 @@ const qualityPillars = [
   },
   {
     title: 'Dye Safety',
-    description: 'Our colored and dyed wool uses exclusively AZO-free, non-toxic dye formulations — safe for workers and compliant with international export requirements.',
+    description: 'Our colored and dyed wool uses exclusively AZO-free, non-toxic dye formulations, safe for workers and compliant with international export requirements.',
   },
   {
     title: 'Animal Welfare',
-    description: 'All wool is sourced from mulesing-free operations — an increasingly required standard for international carpet and textile buyers.',
+    description: 'All wool is sourced from mulesing-free operations, an increasingly required standard for international carpet and textile buyers.',
   },
   {
     title: 'Fire Safety',
-    description: 'Wool\'s natural fire resistance is maintained throughout our supply chain — a key property for carpet and textile safety compliance globally.',
+    description: 'Wool\'s natural fire resistance is maintained throughout our supply chain, a key property for carpet and textile safety compliance globally.',
   },
 ];
 
@@ -39,7 +39,7 @@ export default function CertificationsPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/sgs-testing-facility.jpg"
+          src="/images/hero/sgs-testing-facility.jpg"
           alt="SGS testing facility"
           fill
           priority
@@ -68,7 +68,7 @@ export default function CertificationsPage() {
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-brand-border text-lg max-w-2xl leading-relaxed" style={{ lineHeight: '1.8' }}>
-              Our wool meets the standards that international manufacturers and exporters demand — backed by independent testing, certification documentation, and consistent supply chain practices.
+              Our wool meets the standards that international manufacturers and exporters demand, backed by independent testing, certification documentation and consistent supply chain practices.
             </p>
           </AnimateIn>
         </div>
@@ -175,10 +175,10 @@ export default function CertificationsPage() {
                     The World&apos;s Finest Wool. For Good Reason.
                   </h2>
                   <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(253,249,247,0.75)', lineHeight: '1.85' }}>
-                    New Zealand&apos;s unique climate, vast pastoral lands, and generations of selective sheep breeding have produced the most consistently high-quality wool in the world — with exceptional fiber strength, natural brightness, and dye receptivity that sets it apart from other origins.
+                    New Zealand&apos;s unique climate, vast pastoral lands and generations of selective sheep breeding have produced the most consistently high-quality wool in the world, with exceptional fiber strength, natural brightness and dye receptivity that sets it apart from other origins.
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: 'rgba(253,249,247,0.75)', lineHeight: '1.85' }}>
-                    For Nepal&apos;s carpet and textile industries, which export to discerning international buyers, New Zealand wool is not a preference — it is a quality standard. Tal Barahi has built its entire supply model around bringing this standard consistently to Nepal.
+                    For Nepal&apos;s carpet and textile industries, which export to discerning international buyers, New Zealand wool is not a preference; it is a quality standard. Tal Barahi has built its entire supply model around bringing this standard consistently to Nepal.
                   </p>
                 </AnimateIn>
               </div>
@@ -186,7 +186,7 @@ export default function CertificationsPage() {
                 {[
                   { metric: 'Consistency', value: 'Batch-to-batch uniformity in micron, strength & colour' },
                   { metric: 'Brightness', value: 'Natural whiteness ideal for dyeing and colourfast textiles' },
-                  { metric: 'Resilience', value: 'Outstanding pile recovery — critical for carpet durability' },
+                  { metric: 'Resilience', value: 'Outstanding pile recovery, critical for carpet durability' },
                   { metric: 'Welfare', value: 'Mulesing-free, responsibly farmed on open pastoral land' },
                 ].map((item) => (
                   <StaggerItem key={item.metric}>

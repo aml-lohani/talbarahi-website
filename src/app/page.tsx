@@ -18,17 +18,17 @@ const trustItems = [
 ];
 
 const woolPreview = [
-  { name: 'Scoured Wool',  desc: 'Washed, clean NZ wool at source', color: '#F0EAE0', accent: '#C4A882', category: 'Natural',    image: '/images/raw-scoured-wool-new.webp', objectPos: 'center 80%' },
-  { name: 'Dyed Wool',     desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#6B5040', category: 'Processed',  image: '/images/dyed-wool-rolls.jpg',         objectPos: 'center center' },
-  { name: 'Carpet Wool',   desc: 'Heavy-grade pile resilience',      color: '#D8C9B0', accent: '#7A6848', category: 'Industrial', image: '/images/carpet-wool-natural.webp',    objectPos: 'center center' },
-  { name: 'Felting Wool',  desc: 'Optimal natural felting scales',   color: '#DDD0C0', accent: '#B87050', category: 'Industrial', image: '/images/felting-wool-roving.jpg',     objectPos: 'center center' },
-  { name: 'Carded Wool',   desc: 'Uniform fiber alignment',          color: '#E0D8CC', accent: '#A8956E', category: 'Processed',  image: '/images/carded-white-wool.jpeg',      objectPos: 'center center' },
-  { name: 'Natural Wool',  desc: 'Lanolin-rich, batch consistent',   color: '#E8DDD0', accent: '#7A5A3A', category: 'Natural',    image: '/images/natural-wool-raw.jpeg',       objectPos: 'center 40%' },
+  { name: 'Scoured Wool',  desc: 'Washed, clean NZ wool at source', color: '#F0EAE0', accent: '#C4A882', category: 'Natural',    image: '/images/gallery/raw-scoured-wool-new.webp', objectPos: 'center 80%' },
+  { name: 'Dyed Wool',     desc: 'AZO-free dyed, export-compliant', color: '#D4B5B5', accent: '#6B5040', category: 'Processed',  image: '/images/products/dyed-wool-rolls.jpg',         objectPos: 'center center' },
+  { name: 'Carpet Wool',   desc: 'Heavy-grade pile resilience',      color: '#D8C9B0', accent: '#7A6848', category: 'Industrial', image: '/images/products/carpet-wool-natural.webp',    objectPos: 'center center' },
+  { name: 'Felting Wool',  desc: 'Optimal natural felting scales',   color: '#DDD0C0', accent: '#B87050', category: 'Industrial', image: '/images/products/felting-wool-roving.jpg',     objectPos: 'center center' },
+  { name: 'Carded Wool',   desc: 'Uniform fiber alignment',          color: '#E0D8CC', accent: '#A8956E', category: 'Processed',  image: '/images/products/carded-white-wool.jpeg',      objectPos: 'center center' },
+  { name: 'Natural Wool',  desc: 'Lanolin-rich, batch consistent',   color: '#E8DDD0', accent: '#7A5A3A', category: 'Natural',    image: '/images/products/natural-wool-raw.jpeg',       objectPos: 'center 40%' },
 ];
 
 const testimonials = [
   {
-    quote: 'We have worked with Tal Barahi for over eighteen years. The wool quality and supply consistency has never wavered. For our carpet production, that reliability is not a preference — it is a necessity.',
+    quote: 'We have worked with Tal Barahi for over eighteen years. The wool quality and supply consistency has never wavered. For our carpet production, that reliability is not a preference; it is a necessity.',
     name: 'Sushil Maharjan',
     title: 'Director',
     company: 'Himalayan Carpet Industries, Kathmandu',
@@ -40,7 +40,7 @@ const testimonials = [
     company: 'Nepal Felt Exports, Kathmandu',
   },
   {
-    quote: 'The consistency of wool we receive batch after batch has allowed us to scale our knitwear production with confidence. Tal Barahi is not just a supplier — they are a long-term partner in the truest sense of the word.',
+    quote: 'The consistency of wool we receive batch after batch has allowed us to scale our knitwear production with confidence. Tal Barahi is not just a supplier but a long-term partner in the truest sense of the word.',
     name: 'Rita Shrestha',
     title: 'Proprietor',
     company: 'Kathmandu Knitting House',
@@ -80,7 +80,7 @@ export default function HomePage() {
           style={{ y: heroY, scale: 1.08 }}
         >
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/hero/hero-bg.jpg"
             alt="New Zealand pastoral landscape"
             fill
             priority
@@ -162,7 +162,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.22, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            Nepal&apos;s trusted B2B importer and wholesale supplier of premium New Zealand sheep wool — supporting felt, carpet, garment, and handicraft manufacturers.
+            Nepal&apos;s trusted B2B importer and wholesale supplier of premium New Zealand sheep wool, supporting felt, carpet, garment and handicraft manufacturers.
           </motion.p>
 
           <motion.div
@@ -291,7 +291,7 @@ export default function HomePage() {
               >
                 {/* Real team photo — Tal Barahi partners at NZ farm */}
                 <Image
-                  src="/images/team-wool-inspection-nz.jpg"
+                  src="/images/hero/team-wool-inspection-nz.jpg"
                   alt="Tal Barahi partners at a New Zealand farm inspecting raw wool"
                   fill
                   className="object-cover object-center"
@@ -390,12 +390,12 @@ export default function HomePage() {
               </AnimateIn>
               <AnimateIn delay={0.2}>
                 <p className="text-brand-muted mb-5" style={{ lineHeight: '1.85', maxWidth: '520px' }}>
-                  Founded in 1994, four partners came together in Kathmandu with a humble vision rooted in Nepal&apos;s textile tradition. What began in wool dyeing and Pashmina work grew — through trust, consistency, and genuine industry knowledge — into the country&apos;s most relied-upon wool supply partnership.
+                  Founded in 1994, four partners came together in Kathmandu with a humble vision rooted in Nepal&apos;s textile tradition. What began in wool dyeing and Pashmina work grew, through trust, consistency and genuine industry knowledge, into the country&apos;s most relied-upon wool supply partnership.
                 </p>
               </AnimateIn>
               <AnimateIn delay={0.25}>
                 <p className="text-brand-muted mb-8" style={{ lineHeight: '1.85', maxWidth: '520px' }}>
-                  In the early 2000s, direct import of premium New Zealand wool began — opening a new chapter that has defined Tal Barahi Handicraft for over two decades.
+                  In the early 2000s, direct import of premium New Zealand wool began, opening a new chapter that has defined Tal Barahi Handicraft for over two decades.
                 </p>
               </AnimateIn>
               <AnimateIn delay={0.3}>
@@ -563,7 +563,7 @@ export default function HomePage() {
               </AnimateIn>
               <AnimateIn delay={0.16}>
                 <p className="text-brand-border mb-8" style={{ lineHeight: '1.85', maxWidth: '440px' }}>
-                  Every consignment of wool we supply is backed by independent laboratory testing, certified documentation, and consistent quality grading — meeting the standards that international carpet and textile buyers demand.
+                  Every consignment of wool we supply is backed by independent laboratory testing, certified documentation and consistent quality grading that meets the standards international carpet and textile buyers demand.
                 </p>
               </AnimateIn>
               <AnimateIn delay={0.22}>

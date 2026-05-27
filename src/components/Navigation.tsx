@@ -63,7 +63,9 @@ export default function Navigation() {
               alt="Tal Barahi Handicraft"
               width={64}
               height={64}
-              className="w-12 h-12 md:w-16 md:h-16"
+              className={`w-12 h-12 md:w-16 md:h-16 transition-[filter,opacity] duration-[350ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
+                transparent ? 'md:brightness-0 md:invert md:opacity-90' : ''
+              }`}
             />
             <div className="flex flex-col leading-none">
               <span

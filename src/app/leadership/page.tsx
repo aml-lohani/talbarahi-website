@@ -19,7 +19,7 @@ export default function LeadershipPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/Partner.jpg"
+          src="/images/hero/Partner.jpg"
           alt="Tal Barahi founding partners"
           fill
           priority
@@ -197,7 +197,7 @@ export default function LeadershipPage() {
               </AnimateIn>
               <AnimateIn delay={0.2}>
                 <p className="text-brand-muted leading-relaxed" style={{ lineHeight: '1.85' }}>
-                  Despite their different areas of expertise, our four founding directors have always been united by the same fundamental beliefs — about quality, relationships, and what it means to be a trustworthy partner in Nepal&apos;s craft ecosystem.
+                  Despite their different areas of expertise, our four founding directors have always been united by the same fundamental beliefs about quality, relationships and what it means to be a trustworthy partner in Nepal&apos;s craft ecosystem.
                 </p>
               </AnimateIn>
             </div>

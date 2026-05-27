@@ -7,16 +7,16 @@ import SectionHeader from '@/components/SectionHeader';
 import { woolCategories } from '@/lib/content';
 
 const categoryImages: Record<number, string> = {
-  1: '/images/raw-scoured-wool-new.webp',    // Raw/Scoured Wool
-  2: '/images/natural-wool-raw.jpeg',        // Natural Wool
-  3: '/images/dyed-wool-rolls.jpg',          // Colored & Dyed Wool
-  4: '/images/carded-white-wool.jpeg',       // Carded Wool
-  5: '/images/sheep-shearing-detail.jpg',    // Uncarded Wool
-  6: '/images/carpet-wool-natural.webp',     // Carpet Wool
-  7: '/images/felting-wool-roving.jpg',      // Felting Wool
-  8: '/images/wool-samples-sunlit.jpg',      // Fine Micron Wool
-  9: '/images/wool-knitting.webp',           // Knitting Yarn Wool
-  10: '/images/wool-bales-warehouse.jpg',    // Industrial Bulk Supply
+  1: '/images/gallery/raw-scoured-wool-new.webp',    // Raw/Scoured Wool
+  2: '/images/products/natural-wool-raw.jpeg',        // Natural Wool
+  3: '/images/products/dyed-wool-rolls.jpg',          // Colored & Dyed Wool
+  4: '/images/products/carded-white-wool.jpeg',       // Carded Wool
+  5: '/images/gallery/sheep-shearing-detail.jpg',    // Uncarded Wool
+  6: '/images/products/carpet-wool-natural.webp',     // Carpet Wool
+  7: '/images/products/felting-wool-roving.jpg',      // Felting Wool
+  8: '/images/products/wool-samples-sunlit.jpg',      // Fine Micron Wool
+  9: '/images/gallery/wool-knitting.webp',           // Knitting Yarn Wool
+  10: '/images/gallery/wool-bales-warehouse.jpg',    // Industrial Bulk Supply
 };
 
 const categoryObjectPos: Record<number, string> = {
@@ -38,7 +38,7 @@ export default function WoolCategoriesPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/sheep-farm-nz.jpg"
+          src="/images/hero/sheep-farm-nz.jpg"
           alt="New Zealand sheep farm — source of premium wool"
           fill
           priority
@@ -67,7 +67,7 @@ export default function WoolCategoriesPage() {
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-brand-border text-lg max-w-2xl mt-6 leading-relaxed" style={{ lineHeight: '1.8' }}>
-              We supply a comprehensive range of wool forms, grades, and preparations — each selected for quality, consistency, and suitability for Nepal&apos;s diverse manufacturing industries.
+              We supply a comprehensive range of wool forms, grades and preparations, each selected for quality, consistency and suitability for Nepal&apos;s diverse manufacturing industries.
             </p>
           </AnimateIn>
         </div>
@@ -79,9 +79,9 @@ export default function WoolCategoriesPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { label: 'Source', value: '100% New Zealand', desc: 'All wool sourced exclusively from New Zealand farms — the global benchmark for quality.' },
+              { label: 'Source', value: '100% New Zealand', desc: 'All wool sourced exclusively from New Zealand farms, the global benchmark for quality.' },
               { label: 'Grading', value: 'IWTO Standards', desc: 'Every batch graded and documented to International Wool Textile Organisation standards.' },
-              { label: 'Supply', value: 'Consistent & Reliable', desc: 'Scheduled imports and consistent batch quality — so your production planning is never disrupted.' },
+              { label: 'Supply', value: 'Consistent & Reliable', desc: 'Scheduled imports and consistent batch quality, so your production planning is never disrupted.' },
             ].map((item, i) => (
               <AnimateIn key={item.label} delay={i * 0.1}>
                 <div

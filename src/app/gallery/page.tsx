@@ -9,22 +9,22 @@ import { galleryItems } from '@/lib/content';
 const categories = ['All', 'Sourcing', 'Materials', 'Craft', 'Operations'];
 
 const galleryData = [
-  { id: 1,  label: 'New Zealand Pastoral Farm',            category: 'Sourcing',    height: 320, bg: '#4A6741', image: '/images/sheep-farm-nz.jpg' },
-  { id: 2,  label: 'Wool Inspection at Source',            category: 'Sourcing',    height: 220, bg: '#C9B49A', image: '/images/merino-wool-inspection.jpg' },
-  { id: 3,  label: 'Hand-Knotted Carpet',                  category: 'Craft',       height: 280, bg: '#8B2C2C', image: '/images/wool-carpet-dark.jpg' },
-  { id: 4,  label: 'Kathmandu Bale Storage',               category: 'Operations',  height: 220, bg: '#3D3D3A', image: '/images/wool-in-bales.webp' },
-  { id: 5,  label: 'Sheep Station, New Zealand',           category: 'Sourcing',    height: 360, bg: '#6B7D5E', image: '/images/sheep-barn-nz.jpg' },
-  { id: 6,  label: 'Founding Partners, Kathmandu',          category: 'Operations',  height: 240, bg: '#3A3020', image: '/images/Partner.jpg' },
-  { id: 7,  label: 'Felt Craft, Kathmandu',                category: 'Craft',       height: 260, bg: '#6A3A2A', image: '/images/sheep-shearing.jpg' },
-  { id: 8,  label: 'SGS Testing Facility, New Zealand',    category: 'Operations',  height: 200, bg: '#2B3A4A', image: '/images/sgs-testing-facility.jpg' },
-  { id: 9,  label: 'NZ Farm Landscape',                    category: 'Sourcing',    height: 300, bg: '#7A9060', image: '/images/nz-farm-landscape.jpg' },
-  { id: 10, label: 'Industrial Dyeing Operations',         category: 'Operations',  height: 280, bg: '#4A2A1A', image: '/images/dyeing-factory-ops.webp' },
-  { id: 11, label: 'Knitting Production',                  category: 'Craft',       height: 240, bg: '#8B4A1A', image: '/images/wool-knitting.webp' },
-  { id: 12, label: 'NZ Wool Export Warehouse',             category: 'Operations',  height: 220, bg: '#3A3A36', image: '/images/wool-bales-warehouse.jpg' },
-  { id: 13, label: 'Industrial Carding Machine',           category: 'Operations',  height: 260, bg: '#2A3A2A', image: '/images/carding-industrial.jpg' },
-  { id: 14, label: 'Team Visit, New Zealand',              category: 'Sourcing',    height: 300, bg: '#4A3828', image: '/images/team-wool-inspection-nz.jpg' },
-  { id: 15, label: 'Raw Wool Processing, Kathmandu',       category: 'Operations',  height: 220, bg: '#D0C0A8', image: '/images/raw-scoured-wool-new.webp' },
-  { id: 16, label: 'Shearing Season',                      category: 'Sourcing',    height: 280, bg: '#507040', image: '/images/sheep-shearing-detail.jpg' },
+  { id: 1,  label: 'New Zealand Pastoral Farm',            category: 'Sourcing',    height: 320, bg: '#4A6741', image: '/images/hero/sheep-farm-nz.jpg' },
+  { id: 2,  label: 'Wool Inspection at Source',            category: 'Sourcing',    height: 220, bg: '#C9B49A', image: '/images/gallery/merino-wool-inspection.jpg' },
+  { id: 3,  label: 'Hand-Knotted Carpet',                  category: 'Craft',       height: 280, bg: '#8B2C2C', image: '/images/gallery/wool-carpet-dark.jpg' },
+  { id: 4,  label: 'Kathmandu Bale Storage',               category: 'Operations',  height: 220, bg: '#3D3D3A', image: '/images/gallery/wool-in-bales.webp' },
+  { id: 5,  label: 'Sheep Station, New Zealand',           category: 'Sourcing',    height: 360, bg: '#6B7D5E', image: '/images/gallery/sheep-barn-nz.jpg' },
+  { id: 6,  label: 'Founding Partners, Kathmandu',          category: 'Operations',  height: 240, bg: '#3A3020', image: '/images/hero/Partner.jpg' },
+  { id: 7,  label: 'Felt Craft, Kathmandu',                category: 'Craft',       height: 260, bg: '#6A3A2A', image: '/images/gallery/sheep-shearing.jpg' },
+  { id: 8,  label: 'SGS Testing Facility, New Zealand',    category: 'Operations',  height: 200, bg: '#2B3A4A', image: '/images/hero/sgs-testing-facility.jpg' },
+  { id: 9,  label: 'NZ Farm Landscape',                    category: 'Sourcing',    height: 300, bg: '#7A9060', image: '/images/gallery/nz-farm-landscape.jpg' },
+  { id: 10, label: 'Industrial Dyeing Operations',         category: 'Operations',  height: 280, bg: '#4A2A1A', image: '/images/gallery/dyeing-factory-ops.webp' },
+  { id: 11, label: 'Knitting Production',                  category: 'Craft',       height: 240, bg: '#8B4A1A', image: '/images/gallery/wool-knitting.webp' },
+  { id: 12, label: 'NZ Wool Export Warehouse',             category: 'Operations',  height: 220, bg: '#3A3A36', image: '/images/gallery/wool-bales-warehouse.jpg' },
+  { id: 13, label: 'Industrial Carding Machine',           category: 'Operations',  height: 260, bg: '#2A3A2A', image: '/images/gallery/carding-industrial.jpg' },
+  { id: 14, label: 'Team Visit, New Zealand',              category: 'Sourcing',    height: 300, bg: '#4A3828', image: '/images/hero/team-wool-inspection-nz.jpg' },
+  { id: 15, label: 'Raw Wool Processing, Kathmandu',       category: 'Operations',  height: 220, bg: '#D0C0A8', image: '/images/gallery/raw-scoured-wool-new.webp' },
+  { id: 16, label: 'Shearing Season',                      category: 'Sourcing',    height: 280, bg: '#507040', image: '/images/gallery/sheep-shearing-detail.jpg' },
 ];
 
 export default function GalleryPage() {
@@ -62,7 +62,7 @@ export default function GalleryPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/team-wool-inspection-nz.jpg"
+          src="/images/hero/team-wool-inspection-nz.jpg"
           alt="Tal Barahi team visiting New Zealand wool farm"
           fill
           priority
@@ -91,7 +91,7 @@ export default function GalleryPage() {
           </AnimateIn>
           <AnimateIn delay={0.2}>
             <p className="text-brand-border text-lg max-w-2xl leading-relaxed" style={{ lineHeight: '1.8' }}>
-              A visual journey through our world — from New Zealand&apos;s pastoral farms to Kathmandu&apos;s artisan workshops.
+              A visual journey through our world, from New Zealand&apos;s pastoral farms to Kathmandu&apos;s artisan workshops.
             </p>
           </AnimateIn>
         </div>

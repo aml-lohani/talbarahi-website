@@ -7,13 +7,13 @@ import SectionHeader from '@/components/SectionHeader';
 import { industries } from '@/lib/content';
 
 const industryImages: Record<number, string> = {
-  1: '/images/carpet-wool-natural.webp',
-  2: '/images/felt-balls-colorful.jpg',
-  3: '/images/wool-knitting.webp',
-  4: '/images/dyed-wool-rolls.jpg',
-  5: '/images/wool-samples-sunlit.jpg',
-  6: '/images/natural-wool-raw.jpeg',
-  7: '/images/wool-bales-warehouse.jpg',
+  1: '/images/products/carpet-wool-natural.webp',
+  2: '/images/products/felt-balls-colorful.jpg',
+  3: '/images/gallery/wool-knitting.webp',
+  4: '/images/products/dyed-wool-rolls.jpg',
+  5: '/images/products/wool-samples-sunlit.jpg',
+  6: '/images/products/natural-wool-raw.jpeg',
+  7: '/images/gallery/wool-bales-warehouse.jpg',
 };
 
 export default function IndustriesPage() {
@@ -25,7 +25,7 @@ export default function IndustriesPage() {
         style={{ background: '#2B2B29' }}
       >
         <Image
-          src="/images/nepali-architecture.jpg"
+          src="/images/hero/nepali-architecture.jpg"
           alt="Traditional Nepali carved wood architecture"
           fill
           priority
@@ -191,7 +191,7 @@ export default function IndustriesPage() {
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <p className="text-brand-border max-w-xl mx-auto mb-8" style={{ lineHeight: '1.8' }}>
-              Whether you&apos;re in carpet, felt, knitting, or any other wool-based manufacturing — we have the experience, the supply, and the quality to support your work.
+              Whether you&apos;re in carpet, felt, knitting or any other wool-based manufacturing, we have the experience, the supply and the quality to support your work.
             </p>
           </AnimateIn>
           <AnimateIn delay={0.2}>
