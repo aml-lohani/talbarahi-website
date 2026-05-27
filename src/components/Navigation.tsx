@@ -61,9 +61,9 @@ export default function Navigation() {
             <Image
               src="/logo.png"
               alt="Tal Barahi Handicraft"
-              width={48}
-              height={48}
-              className="w-11 h-11 md:w-12 md:h-12"
+              width={64}
+              height={64}
+              className="w-12 h-12 md:w-16 md:h-16"
             />
             <div className="flex flex-col leading-none">
               <span

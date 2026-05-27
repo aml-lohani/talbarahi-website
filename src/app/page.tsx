@@ -85,6 +85,9 @@ export default function HomePage() {
             fill
             priority
             quality={90}
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyQjJCMjkiLz48L3N2Zz4="
+            sizes="100vw"
             className="object-cover object-center"
           />
         </motion.div>
@@ -149,7 +152,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.08, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            From New Zealand Wool to Nepalese Craft.
+            From New Zealand Wool to Nepalese Craft Since 1994.
           </motion.h1>
 
           <motion.p

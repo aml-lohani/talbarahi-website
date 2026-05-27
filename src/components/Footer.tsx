@@ -28,9 +28,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Tal Barahi Handicraft"
-                width={44}
-                height={44}
-                className="w-11 h-11 brightness-0 invert opacity-80"
+                width={64}
+                height={64}
+                className="w-16 h-16 brightness-0 invert opacity-80"
               />
               <div className="flex flex-col leading-none">
                 <span

@@ -16,7 +16,7 @@ const categoryImages: Record<number, string> = {
   7: '/images/felting-wool-roving.jpg',      // Felting Wool
   8: '/images/wool-samples-sunlit.jpg',      // Fine Micron Wool
   9: '/images/wool-knitting.webp',           // Knitting Yarn Wool
-  10: '/images/wool-bales-warehouse.png',    // Industrial Bulk Supply
+  10: '/images/wool-bales-warehouse.jpg',    // Industrial Bulk Supply
 };
 
 const categoryObjectPos: Record<number, string> = {
@@ -38,10 +38,12 @@ export default function WoolCategoriesPage() {
       {/* Header */}
       <section className="pt-40 pb-24 bg-brand-charcoal relative overflow-hidden">
         <Image
-          src="/images/sheep-farm-nz.png"
+          src="/images/sheep-farm-nz.jpg"
           alt="New Zealand sheep farm — source of premium wool"
           fill
           priority
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyQjJCMjkiLz48L3N2Zz4="
           className="object-cover object-center"
           sizes="100vw"
         />

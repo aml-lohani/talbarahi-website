@@ -13,7 +13,7 @@ const industryImages: Record<number, string> = {
   4: '/images/dyed-wool-rolls.jpg',
   5: '/images/wool-samples-sunlit.jpg',
   6: '/images/natural-wool-raw.jpeg',
-  7: '/images/wool-bales-warehouse.png',
+  7: '/images/wool-bales-warehouse.jpg',
 };
 
 export default function IndustriesPage() {
@@ -29,6 +29,8 @@ export default function IndustriesPage() {
           alt="Traditional Nepali carved wood architecture"
           fill
           priority
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMyQjJCMjkiLz48L3N2Zz4="
           className="object-cover object-center"
           sizes="100vw"
         />
