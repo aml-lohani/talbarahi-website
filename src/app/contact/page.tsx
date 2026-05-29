@@ -10,10 +10,29 @@ export default function ContactPage() {
     name: '', company: '', email: '', phone: '', industry: '', message: '', woolType: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Something went wrong.');
+      }
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -347,12 +366,34 @@ export default function ContactPage() {
                         />
                       </div>
 
-                      <button type="submit" className="btn-primary w-full justify-center">
-                        Send Enquiry
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="btn-primary w-full justify-center"
+                        style={{ opacity: loading ? 0.7 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}
+                      >
+                        {loading ? (
+                          <>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="animate-spin">
+                              <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.5" strokeDasharray="8 6" />
+                            </svg>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send Enquiry
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </>
+                        )}
                       </button>
+
+                      {error && (
+                        <p className="text-xs mt-3 text-center" style={{ color: '#8B2C2C', lineHeight: '1.6' }}>
+                          {error}
+                        </p>
+                      )}
 
                       <p className="text-xs text-brand-muted mt-4 text-center" style={{ lineHeight: '1.6' }}>
                         Your information is kept private and used only to respond to your enquiry.
