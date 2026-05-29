@@ -1,10 +1,32 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { certifications } from '@/lib/content';
+
+export const metadata: Metadata = {
+  title: 'Quality & Certifications — IWTO, Mulesing-Free, SGS Tested',
+  description:
+    'Tal Barahi Handicraft\'s wool meets the highest international standards. IWTO-certified, independently mulesing-free, and SGS quality-tested at source in New Zealand.',
+  keywords: [
+    'IWTO certified wool Nepal',
+    'mulesing-free wool Nepal',
+    'SGS tested wool',
+    'certified wool supplier Nepal',
+    'wool quality standards Nepal',
+    'New Zealand wool certification',
+    'traceable wool supply Nepal',
+    'sustainable wool Nepal',
+    'ethical wool sourcing',
+  ],
+  openGraph: {
+    title: 'Quality & Certifications | Tal Barahi Handicraft',
+    description: 'IWTO-certified, mulesing-free and SGS-tested New Zealand wool — international quality standards delivered to Kathmandu.',
+    images: [{ url: '/images/hero/sgs-testing-facility.jpg', width: 1200, height: 630, alt: 'SGS testing facility New Zealand' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/certifications' },
+};
 
 const qualityPillars = [
   {

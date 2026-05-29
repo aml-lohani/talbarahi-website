@@ -1,8 +1,27 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+
+export const metadata: Metadata = {
+  title: 'Our Story — Three Decades of Wool Supply Excellence',
+  description:
+    'Founded in 1994 in Kathmandu, Tal Barahi Handicraft has grown from a small partnership to Nepal\'s trusted New Zealand wool supplier — serving carpet, felt, knitting and textile industries for over 30 years.',
+  keywords: [
+    'Tal Barahi Handicraft history',
+    'wool supplier Nepal 30 years',
+    'Kathmandu wool company history',
+    'New Zealand wool Nepal story',
+    'wool importer Nepal founded 1994',
+    'Nepali wool trading company',
+  ],
+  openGraph: {
+    title: 'Our Story | Tal Barahi Handicraft',
+    description: 'From a small partnership in Kathmandu in 1994 to Nepal\'s most trusted New Zealand wool supplier — three decades of craft and commitment.',
+    images: [{ url: '/images/hero/Partner.jpg', width: 1200, height: 630, alt: 'Tal Barahi Handicraft founding partners' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/about' },
+};
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { timeline } from '@/lib/content';

@@ -1,8 +1,31 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
+
+export const metadata: Metadata = {
+  title: 'Industries We Serve — Carpet, Felt, Knitting & Textile Nepal',
+  description:
+    'Tal Barahi Handicraft supplies premium New Zealand wool to Nepal\'s carpet manufacturing, felt production, knitting, textile, handicraft, and artisan industries. Serving over 7 industry sectors for 30+ years.',
+  keywords: [
+    'wool for carpet industry Nepal',
+    'carpet wool supplier Kathmandu',
+    'felt wool Nepal supplier',
+    'knitting wool Nepal',
+    'textile wool Nepal',
+    'handicraft wool Kathmandu',
+    'wool for artisans Nepal',
+    'wool manufacturer Nepal',
+    'carpet industry wool supply',
+    'Nepali wool textile industry',
+  ],
+  openGraph: {
+    title: 'Industries We Serve | Tal Barahi Handicraft',
+    description: 'Premium New Zealand wool for Nepal\'s carpet, felt, knitting, textile and handicraft industries — 30 years of trusted supply.',
+    images: [{ url: '/images/hero/nepali-architecture.jpg', width: 1200, height: 630, alt: 'Traditional Nepali craft architecture' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/industries' },
+};
 import SectionHeader from '@/components/SectionHeader';
 import { industries } from '@/lib/content';
 

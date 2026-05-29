@@ -1,10 +1,35 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { woolCategories } from '@/lib/content';
+
+export const metadata: Metadata = {
+  title: 'New Zealand Wool Categories — Raw, Carded, Dyed, Fine Micron & More',
+  description:
+    'Explore Tal Barahi Handicraft\'s full range of New Zealand wool: raw white, natural coloured, carded, dyed, fine micron merino, carpet-grade, felting and bulk industrial supply. Available for Nepal\'s craft industries.',
+  keywords: [
+    'New Zealand wool types Nepal',
+    'raw wool supplier Nepal',
+    'carded wool Nepal',
+    'dyed wool Nepal',
+    'fine micron merino wool Nepal',
+    'carpet grade wool Nepal',
+    'felting wool supplier Nepal',
+    'bulk industrial wool Nepal',
+    'wool grades Kathmandu',
+    'merino wool supplier Nepal',
+    'natural wool Nepal',
+    'coloured wool Nepal',
+  ],
+  openGraph: {
+    title: 'Wool Categories | Tal Barahi Handicraft',
+    description: 'Raw, carded, dyed, fine micron and bulk industrial New Zealand wool — the complete range for Nepal\'s carpet, felt and knitting industries.',
+    images: [{ url: '/images/hero/sheep-farm-nz.jpg', width: 1200, height: 630, alt: 'New Zealand sheep farm pastoral' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/wool-categories' },
+};
 
 const categoryImages: Record<number, string> = {
   1: '/images/gallery/raw-scoured-wool-new.webp',    // Raw/Scoured Wool

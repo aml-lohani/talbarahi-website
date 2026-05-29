@@ -1,8 +1,26 @@
-'use client';
-
+import { Metadata } from 'next';
 import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import { directors } from '@/lib/content';
+
+export const metadata: Metadata = {
+  title: 'Leadership — The Founders Behind Tal Barahi Handicraft',
+  description:
+    'Meet the founding partners and leadership team of Tal Barahi Handicraft — the people who have built three decades of trust supplying New Zealand wool to Nepal\'s craft industries from Kathmandu.',
+  keywords: [
+    'Tal Barahi Handicraft founders',
+    'Kathmandu wool company leadership',
+    'wool supplier Nepal directors',
+    'Nepal wool industry leaders',
+    'Tal Barahi team',
+  ],
+  openGraph: {
+    title: 'Leadership | Tal Barahi Handicraft',
+    description: 'The founding partners who have led Tal Barahi Handicraft for over 30 years — building trust, quality and relationships across Nepal\'s wool supply chain.',
+    images: [{ url: '/images/hero/Partner.jpg', width: 1200, height: 630, alt: 'Tal Barahi Handicraft founding partners' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/leadership' },
+};
 
 const companyValues = [
   'Trust through consistency',

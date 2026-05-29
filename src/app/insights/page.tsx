@@ -1,10 +1,33 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn, { AnimateStagger, StaggerItem } from '@/components/AnimateIn';
 import SectionHeader from '@/components/SectionHeader';
 import { insights } from '@/lib/content';
+
+export const metadata: Metadata = {
+  title: 'Wool Industry Insights — Knowledge, Craft & Supply Chain',
+  description:
+    'Industry knowledge from 30 years at the centre of Nepal\'s wool supply ecosystem. Perspectives on wool grading, micron science, New Zealand sourcing, carpet industry trends and craft heritage.',
+  keywords: [
+    'wool industry insights Nepal',
+    'New Zealand wool knowledge',
+    'carpet wool guide Nepal',
+    'wool grading guide',
+    'micron science wool',
+    'wool sourcing Nepal',
+    'Nepal carpet industry knowledge',
+    'wool supply chain Nepal',
+    'craft heritage Nepal wool',
+    'felt production guide',
+  ],
+  openGraph: {
+    title: 'Insights | Tal Barahi Handicraft',
+    description: '30 years of wool industry knowledge — insights on grading, sourcing, craft heritage and Nepal\'s manufacturing ecosystem.',
+    images: [{ url: '/images/hero/nepal-mountains-prayer-flags.jpg', width: 1200, height: 630, alt: 'Nepal mountains with prayer flags' }],
+  },
+  alternates: { canonical: 'https://www.talbarahihandicraft.com.np/insights' },
+};
 
 const categoryColors: Record<string, string> = {
   'Wool Knowledge': '#4A6741',
