@@ -227,7 +227,7 @@ export async function POST(req: NextRequest) {
     const [notifyResult, autoReplyResult] = await Promise.all([
       // Notification to Tal Barahi
       resend.emails.send({
-        from: 'Contact Form <onboarding@resend.dev>',
+        from: 'Contact Form <noreply@talbarahihandicraft.com.np>',
         to: toEmail,
         replyTo: email,
         subject: `New Enquiry from ${name}${company ? ` — ${company}` : ''}`,
@@ -235,7 +235,7 @@ export async function POST(req: NextRequest) {
       }),
       // Auto-reply to sender
       resend.emails.send({
-        from: 'Tal Barahi Handicraft <onboarding@resend.dev>',
+        from: 'Tal Barahi Handicraft <hello@talbarahihandicraft.com.np>',
         to: email,
         subject: 'We received your enquiry — Tal Barahi Handicraft',
         html: buildAutoReplyHtml(name),
